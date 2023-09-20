@@ -1,44 +1,18 @@
-import {
-    ChevronDownIcon,
-    ChevronRightIcon,
-    EnvelopeIcon,
-    GlobeAltIcon,
-    PhoneIcon,
-    UserCircleIcon
-} from "@heroicons/react/24/outline";
-import {useState} from "react";
+import {ChevronDownIcon, ChevronRightIcon, GlobeAltIcon, UserCircleIcon} from "@heroicons/react/24/outline";
+import React, {useState} from "react";
+import {aboutBio, aboutEducation} from "../data";
+import {contactsSections, infoSections} from "../constants";
+import {FolderOpenIcon} from "@heroicons/react/24/solid";
+import {Sidebar} from "../components";
 
-const infoSections = [
-    {
-        id: 1,
-        title: 'bio',
-    },
-    {
-        id: 2,
-        title: 'interests',
-    },
-    {
-        id: 3,
-        title: 'education',
-    },
-    {
-        id: 4,
-        title: 'experience',
-    },
-]
+const ContentContainer = ({text}: { text: React.ReactNode }) => {
 
-const contactsSections = [
-    {
-        id: 1,
-        text: 'malo2dis@gmail.com',
-        icon: <EnvelopeIcon className="h-4 w-4 object-contain mr-2"/>
-    },
-    {
-        id: 2,
-        text: '+1234567890',
-        icon: <PhoneIcon className="h-4 w-4 object-contain mr-2"/>
-    },
-]
+    return (
+        <div className="text-gray-text p-4">
+            {text}
+        </div>
+    );
+}
 
 
 const About = () => {
@@ -49,17 +23,13 @@ const About = () => {
         switch (id) {
             case 1:
                 return (
-                    <div>BIO</div>
+                    aboutBio
                 )
             case 2:
                 return (
-                    <div>Interests</div>
+                    aboutEducation
                 )
             case 3:
-                return (
-                    <div>education</div>
-                )
-            case 4:
                 return (
                     <div>experience</div>
                 )
@@ -69,9 +39,9 @@ const About = () => {
     return (
         <main className="flex w-full flex-1 relative bg-main-dark-bg">
             <div className="flex text-white-text w-full mx-auto">
-                <div className="lg:w-96 w-72 h-full bg-second-dark-bg p-4 text-gray-text">
-                    <p className="text-white flex items-center mb-4"><UserCircleIcon
-                        className="w-6 h-6s object-contain mr-2"/> personal_info</p>
+                <Sidebar>
+                    <p className="text-white-text flex items-center mb-4"><UserCircleIcon
+                        className="w-6 h-6 object-contain mr-2"/> personal_info</p>
                     <ul className="pl-7 mb-8">
                         {infoSections.map(({id, title}) => (
                             <li key={id}
@@ -82,12 +52,14 @@ const About = () => {
                                         ? <ChevronDownIcon/>
                                         : <ChevronRightIcon/>}
                                 </span>
+                                <span className="w-4 h-4 object-contain mr-2"><FolderOpenIcon
+                                    className={isSelected(id) ? 'text-blue-text' : ''}/></span>
                                 {title}
                             </li>
                         ))}
                     </ul>
 
-                    <p className="text-white flex items-center mb-4"><GlobeAltIcon
+                    <p className="text-white-text flex items-center mb-4"><GlobeAltIcon
                         className="w-6 h-6s object-contain mr-2"/> contacts</p>
                     <ul className="pl-7">
                         {contactsSections.map(({id, text, icon}) => (
@@ -97,7 +69,7 @@ const About = () => {
                             </li>
                         ))}
                     </ul>
-                </div>
+                </Sidebar>
 
                 <div>
                     {getContent(selectedSectionId)}
