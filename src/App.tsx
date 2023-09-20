@@ -5,9 +5,9 @@ import {Footer, Header} from "./components";
 
 const App = () => {
     const Layout = () => (
-        <div className="relative flex flex-col w-full min-h-screen overscroll-none">
+        <div className="relative flex flex-col w-full min-h-screen overflow-hidden">
             <Header/>
-                <Outlet/>
+            <Outlet/>
             <Footer/>
         </div>
     )

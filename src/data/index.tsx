@@ -1,5 +1,5 @@
 export const aboutBio = (
-    <div className="text-gray-text p-4">
+    <>
         <h4 className="mb-2">Hello everyone.</h4>
         <p>My name is Kirill, and I'm a web developer:)</p>
         <p>I've been involved in development for over 7 years now.
@@ -24,11 +24,11 @@ export const aboutBio = (
             please don't hesitate to get in touch.
             I'm always ready for new challenges and look forward to the opportunity to
             collaborate with you.</p>
-    </div>
+    </>
 )
 
 export const aboutEducation = (
-    <div className="text-gray-text p-4">
+    <>
         <p>I hold an engineering degree and graduated from the Faculty of Radio Engineering and Electronics,
             specializing
             in Multichannel Telecommunication Systems. After working as an engineer for several years, I found myself
@@ -48,5 +48,5 @@ export const aboutEducation = (
             to delivering high-quality work and am excited to be a part of innovative projects in the software
             development
             field.</p>
-    </div>
+    </>
 )

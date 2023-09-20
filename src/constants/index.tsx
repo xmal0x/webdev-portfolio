@@ -1,4 +1,4 @@
-import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/24/outline";
+import {HiOutlineEnvelope, HiPhone} from 'react-icons/hi2'
 
 export const infoSections = [
     {
@@ -19,11 +19,11 @@ export const contactsSections = [
     {
         id: 1,
         text: 'malo2dis@gmail.com',
-        icon: <EnvelopeIcon className="h-4 w-4 object-contain mr-2"/>
+        icon: <HiOutlineEnvelope className="h-4 w-4 object-contain mr-2"/>
     },
     {
         id: 2,
         text: '+1234567890',
-        icon: <PhoneIcon className="h-4 w-4 object-contain mr-2"/>
+        icon: <HiPhone className="h-4 w-4 object-contain mr-2"/>
     },
 ]

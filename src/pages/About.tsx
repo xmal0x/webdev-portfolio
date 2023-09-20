@@ -1,23 +1,12 @@
-import {ChevronDownIcon, ChevronRightIcon, GlobeAltIcon, UserCircleIcon} from "@heroicons/react/24/outline";
 import React, {useState} from "react";
 import {aboutBio, aboutEducation} from "../data";
 import {contactsSections, infoSections} from "../constants";
-import {FolderOpenIcon} from "@heroicons/react/24/solid";
+import {HiChevronDown, HiChevronRight, HiFolderOpen, HiGlobeAlt, HiUserCircle} from "react-icons/hi2"
 import {Sidebar} from "../components";
-
-const ContentContainer = ({text}: { text: React.ReactNode }) => {
-
-    return (
-        <div className="text-gray-text p-4">
-            {text}
-        </div>
-    );
-}
-
 
 const About = () => {
     const [selectedSectionId, setSelectedSectionId] = useState(1)
-    const isSelected = (id: number) => selectedSectionId == id
+    const isSelected = (id: number) => selectedSectionId === id
 
     const getContent = (id: number) => {
         switch (id) {
@@ -37,10 +26,10 @@ const About = () => {
     }
 
     return (
-        <main className="flex w-full flex-1 relative bg-main-dark-bg">
+        <main className="mt-14 flex w-full flex-1 relative bg-main-dark-bg">
             <div className="flex text-white-text w-full mx-auto">
                 <Sidebar>
-                    <p className="text-white-text flex items-center mb-4"><UserCircleIcon
+                    <p className="text-white-text flex items-center mb-4"><HiUserCircle
                         className="w-6 h-6 object-contain mr-2"/> personal_info</p>
                     <ul className="pl-7 mb-8">
                         {infoSections.map(({id, title}) => (
@@ -49,17 +38,17 @@ const About = () => {
                                 className={`flex items-center hover:text-white cursor-pointer mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
                                 <span className="w-4 h-4 object-contain mr-2">
                                     {isSelected(id)
-                                        ? <ChevronDownIcon/>
-                                        : <ChevronRightIcon/>}
+                                        ? <HiChevronDown/>
+                                        : <HiChevronRight/>}
                                 </span>
-                                <span className="w-4 h-4 object-contain mr-2"><FolderOpenIcon
+                                <span className="w-4 h-4 object-contain mr-2"><HiFolderOpen
                                     className={isSelected(id) ? 'text-blue-text' : ''}/></span>
                                 {title}
                             </li>
                         ))}
                     </ul>
 
-                    <p className="text-white-text flex items-center mb-4"><GlobeAltIcon
+                    <p className="text-white-text flex items-center mb-4"><HiGlobeAlt
                         className="w-6 h-6s object-contain mr-2"/> contacts</p>
                     <ul className="pl-7">
                         {contactsSections.map(({id, text, icon}) => (
@@ -71,7 +60,7 @@ const About = () => {
                     </ul>
                 </Sidebar>
 
-                <div>
+                <div className="text-gray-text p-8">
                     {getContent(selectedSectionId)}
                 </div>
             </div>

@@ -20,10 +20,9 @@ const menuLinks = [
 ]
 
 
-
 const Header = () => {
     return (
-        <header className="static w-full bg-second-dark-bg text-gray-text h-14 border-b border-secondary-gray">
+        <header className="fixed z-50 w-full bg-second-dark-bg text-gray-text h-14 border-b border-secondary-gray">
             <nav className="flex justify-between items-center h-full m-auto px-4">
                 <div className="flex h-full items-center">
                     <Link to={'/'} className="md:w-48 w-32 md:mr-0 mr-4">

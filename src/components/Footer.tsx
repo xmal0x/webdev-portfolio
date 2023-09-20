@@ -17,12 +17,14 @@ const footerLinks = [
 
 const Footer = () => {
     return (
-        <footer className="static bottom-0 w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray">
+        <footer
+            className="static w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray">
             <div className="flex justify-between px-4 items-center h-full">
                 <div className="flex h-full items-center">
                     <span className="mr-4">find_me_in:</span>
                     {footerLinks.map((link, index) => (
-                        <div key={link.id} className={`border-l ${index === footerLinks.length - 1 ? 'border-r' : ''} h-full px-4 flex items-center border-secondary-gray`}>
+                        <div key={link.id}
+                             className={`border-l ${index === footerLinks.length - 1 ? 'border-r' : ''} h-full px-4 flex items-center border-secondary-gray`}>
                             <a href={link.link}>{link.icon}</a>
                         </div>
                     ))}
