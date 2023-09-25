@@ -1,3 +1,8 @@
+import {car_catalog, dashboard, earth_landing} from "../assets";
+import {AiOutlineGithub} from "react-icons/ai";
+import React from "react";
+import {CareerStage} from "../types";
+
 export const aboutBio = (
     <>
         <h4 className="mb-2">Hello everyone.</h4>
@@ -50,3 +55,164 @@ export const aboutEducation = (
             field.</p>
     </>
 )
+
+export const projects = [
+    {
+        id: 1,
+        title: 'car_catalog',
+        description: 'Search cars using filters',
+        image: car_catalog,
+        tags: ['tailwind', 'nextjs', 'react', 'typescript', 'nextauth', 'mongodb'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/carCat'
+            },
+        ]
+    },
+    {
+        id: 2,
+        title: 'earth_life_landing',
+        description: 'Save Our Earth Landing Page',
+        image: earth_landing,
+        tags: ['tailwind', 'react', 'typescript'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/earth-life-landing'
+            },
+        ]
+    },
+    {
+        id: 3,
+        title: 'dashboard_interface',
+        description: 'Web interface with dashboard and chat',
+        image: dashboard,
+        tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/Dashboard'
+            },
+        ]
+    },
+    {
+        id: 4,
+        title: 'car_catalog',
+        description: 'Search cars using filters',
+        image: car_catalog,
+        tags: ['tailwind', 'nextjs', 'react', 'typescript', 'nextauth', 'mongodb'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/carCat'
+            },
+        ]
+    },
+    {
+        id: 5,
+        title: 'dashboard_interface',
+        description: 'Web interface with dashboard and chat',
+        image: dashboard,
+        tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/Dashboard'
+            },
+        ]
+    },
+    {
+        id: 6,
+        title: 'earth_life_landing',
+        description: 'Save Our Earth Landing Page',
+        image: earth_landing,
+        tags: ['tailwind', 'react', 'typescript'],
+        links: [
+            {
+                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
+                title: 'github',
+                url: 'https://github.com/xmal0x/earth-life-landing'
+            },
+        ]
+    },
+]
+
+export const career: CareerStage[] = [
+    {
+        id: 4,
+        companyName: 'Zyfra',
+        start: new Date('2022-02-01'),
+        end: new Date('2023-07-01'),
+        position: 'Frontend Developer',
+        technology: ['node.js', 'angular', 'typescript'],
+        tasks: [
+            'Creating user interfaces and client-side components using the Angular framework to build interactive and responsive web applications',
+            'Collaborating with existing codebases, understanding and adapting to code written by others, and ensuring its integration into ongoing projects',
+            'Improving code quality and maintainability by reorganizing and optimizing existing code without changing its external behavior',
+            'Enhancing code and application performance to improve speed, resource utilization, and overall efficiency.',
+            'Identifying, diagnosing, and fixing errors and issues in applications to ensure their smooth operation',
+            'Designing, implementing, and integrating new features and functionalities to enhance the capabilities of existing applications',
+            'Updating and modernizing old code components and functionality to align with current standards and requirements, while maintaining compatibility with the existing system',
+            'Actively participating in task evaluation and architectural discussions to collaboratively develop the best solutions for the project',
+        ]
+    },
+    {
+        id: 3,
+        companyName: 'Murano Software',
+        start: new Date('2020-09-01'),
+        end: new Date('2022-02-01'),
+        position: 'Fullstack Developer',
+        technology: ['.net', 'postgresql', 'typescript', 'angular'],
+        tasks: [
+            'Frontend development using Angular, creating user interfaces and client-side components for applications',
+            'Backend development using the .NET platform, including the creation of reliable and scalable server-side components and applications',
+            'Working with existing code, which involves analyzing, adapting, and making modifications to someone else\'s code to improve its readability and maintainability',
+            'Conducting code refactoring to enhance its structure, cleanliness, and efficiency',
+            'Optimizing code and application architecture to improve performance and resource efficiency',
+            'Analyzing and resolving errors in applications, including identifying and rectifying various issues and misunderstandings',
+            'Developing new functionality, including adding new features and modules to existing applications',
+            'Rewriting old functionality, updating and modernizing existing components and modules to meet modern standards and requirements',
+        ]
+    },
+    {
+        id: 2,
+        companyName: 'Elva',
+        start: new Date('2017-11-01'),
+        end: new Date('2020-09-01'),
+        position: 'Senior Developer',
+        technology: ['.net', 'javascript', 'mssql', 'postgresql', 'typescript', 'angular', 'react'],
+        tasks: [
+            'Software development on the .NET platform, creating robust and scalable applications',
+            'Collaborating with existing codebases, conducting code refactoring, and optimizing performance for enhanced efficiency',
+            'SWR-PDM platform development, including the creation of modules that seamlessly link product structures with documentation',
+            'Designing and implementing web services to facilitate data exchange and communication',
+            'Front-end development expertise, encompassing JavaScript, TypeScript, and proficiency in frameworks like Angular and React, to create engaging and user-friendly interfaces',
+            'Developing plugins and business processes within the Microsoft Dynamics CRM environment to enhance its capabilities',
+            'Playing a crucial role in project planning, including project design and assessment, ensuring the successful execution of software development projects',
+            'Authoring informative articles about products and solutions for the company\'s website to enhance product awareness and knowledge sharing',
+            'Mentoring and supervising junior developers through internship programs, fostering their growth and development within the team',
+        ]
+    },
+    {
+        id: 1,
+        companyName: 'BIA',
+        start: new Date('2016-09-01'),
+        end: new Date('2017-11-01'),
+        position: 'Developer',
+        technology: ['.net', 'javascript', 'mssql'],
+        tasks: [
+            'Designing and building a warehouse management platform',
+            'Crafting custom scripts tailored to specific needs',
+            'Formulating intricate database queries, procedures, and functions to efficiently handle data',
+            'Developing specialized services to seamlessly import data into the system and facilitate smooth data exchanges with clients',
+            'Providing continuous support and maintenance for the system to ensure its uninterrupted functionality',
+            'Engaging in code refactoring, scrutinizing third-party code for improvements, identifying and rectifying errors, and optimizing performance for enhanced efficiency',
+        ]
+    },
+]
