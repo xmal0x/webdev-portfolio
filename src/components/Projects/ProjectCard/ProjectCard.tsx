@@ -1,7 +1,8 @@
-import {ProjectCardProps} from "../../types";
+import {ProjectCardProps} from "../../../types";
 import React from "react";
 
 export const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps) => {
+
     return (
         <div>
             <div className="flex mb-4 flex-wrap">

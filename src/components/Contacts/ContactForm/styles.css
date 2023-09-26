@@ -1,0 +1,17 @@
+.form {
+    @apply flex flex-col w-fit
+}
+
+.label {
+    @apply flex flex-col mb-4 gap-1
+}
+
+.input {
+    @apply w-96 outline-none p-1 bg-second-dark-bg border text-white-text
+    border-secondary-gray rounded focus:border-gray-text focus:shadow focus:shadow-secondary-gray
+}
+
+.submit {
+    @apply w-fit py-2 px-4 border border-secondary-gray rounded self-end bg-second-dark-bg
+    hover:text-white hover:bg-secondary-gray hover:shadow
+}

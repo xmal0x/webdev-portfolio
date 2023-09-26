@@ -1,4 +1,4 @@
-import {TimeLineItemProps} from "../../types";
+import {TimeLineItemProps} from "../../../types";
 import React from "react";
 
 const TimelineItem = ({careerStage, onSelect}: TimeLineItemProps) => {

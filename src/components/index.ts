@@ -1,11 +1,15 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import Timeline from "./Timeline/Timeline"
+import Footer from "./UI/Footer/Footer"
+import Header from "./UI/Header/Header"
+import Timeline from "./AboutMe/Timeline/Timeline"
 
-import NavButton from "./NavButton/NavButton"
-import Sidebar from "./Sidebar/Sidebar"
-import {ProjectCard} from "./ProjectCard/ProjectCard"
-import TimelineItem from "./TimelineItem/TimelineItem"
+import NavButton from "./UI/NavButton/NavButton"
+import Sidebar from "./UI/Sidebar/Sidebar"
+import {ProjectCard} from "./Projects/ProjectCard/ProjectCard"
+import TimelineItem from "./UI/TimelineItem/TimelineItem"
+import Textarea from "./UI/Textarea/Textarea"
+
+import ContactForm from "./Contacts/ContactForm/ContactForm"
+import CodeForm from "./Contacts/CodeForm/CodeForm"
 
 export {
     Footer,
@@ -15,5 +19,8 @@ export {
     NavButton,
     Sidebar,
     ProjectCard,
-    TimelineItem
+    TimelineItem,
+    Textarea,
+    ContactForm,
+    CodeForm
 }

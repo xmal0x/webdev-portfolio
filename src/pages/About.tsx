@@ -1,9 +1,12 @@
 import React, {useState} from "react";
-import {aboutBio, aboutEducation, career} from "../data";
-import {contactsSections, infoSections, months} from "../constants";
-import {HiChevronDown, HiChevronRight, HiFolderOpen, HiGlobeAlt, HiUserCircle} from "react-icons/hi2"
+import {career} from "../data";
+import {infoSections, months} from "../constants";
+import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-icons/hi2"
 import {Sidebar, Timeline} from "../components";
 import {CareerStage} from "../types";
+import "yet-another-react-lightbox/styles.css";
+import Bio from "../components/AboutMe/Bio/Bio";
+import Education from "../components/AboutMe/Education/Education";
 
 interface CareerStageProps {
     stage: CareerStage
@@ -42,7 +45,7 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
     return (
         <div
             onClick={() => handleClose()}
-            className="flex-1 lg:relative absolute inset-0 md:h-fit lg:m-0 m-4
+            className="flex-1 lg:relative absolute inset-0 h-fit lg:m-0 m-4
             lg:bg-inherit bg-second-dark-bg overflow-auto
             lg:border-none border border-secondary-gray rounded-sm">
             <div className="flex-col md:p-8 p-4  flex overflow-auto">
@@ -80,13 +83,9 @@ const About = () => {
     const getContent = (id: number) => {
         switch (id) {
             case contentType.about:
-                return (
-                    aboutBio
-                )
+                return <Bio/>
             case contentType.education:
-                return (
-                    aboutEducation
-                )
+                return <Education/>
             case contentType.experience:
                 return (
                     <div className="md:flex-row flex-col">
@@ -119,16 +118,8 @@ const About = () => {
                         ))}
                     </ul>
 
-                    <p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt
-                        className="w-6 h-6s object-contain mr-2"/> contacts</p>
-                    <ul className="pl-7 md:block hidden">
-                        {contactsSections.map(({id, text, icon}) => (
-                            <li key={id}
-                                className={`flex items-center hover:text-white cursor-pointer mb-2`}>
-                                {icon} {text}
-                            </li>
-                        ))}
-                    </ul>
+                    {/*<p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt*/}
+                    {/*    className="w-6 h-6 object-contain mr-2"/> contacts</p>*/}
                 </Sidebar>
 
                 <div className="text-gray-text md:p-8 p-4 flex-1">
@@ -137,7 +128,8 @@ const About = () => {
 
                 {careerStage &&
                     <>
-                        <div className="absolute bg-black opacity-70 inset-0" onClick={() => setCareerStage(undefined)}>
+                        <div className="lg:hidden absolute bg-black opacity-70 inset-0"
+                             onClick={() => setCareerStage(undefined)}>
                         </div>
                         <Stage stage={careerStage} key={careerStage.id} onClose={() => setCareerStage(undefined)}/>
                     </>

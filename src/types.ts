@@ -1,4 +1,5 @@
-import React from "react";
+import React, {FormEvent} from "react";
+import {Image} from "react-grid-gallery";
 
 export interface NavButtonProps {
     link: string,
@@ -32,4 +33,36 @@ export interface TimeLineProps {
 export interface TimeLineItemProps {
     careerStage: CareerStage
     onSelect: () => void
+}
+
+export interface CustomImage extends Image {
+    original: string;
+}
+
+export interface TextContent {
+    title: string
+    paragraphs: string[]
+}
+
+export interface TextareaProps {
+    content: TextContent
+}
+
+export interface Link {
+    id: number
+    text: string
+    link: string
+    icon?: React.ReactNode
+}
+
+export interface ContactFormProps {
+    onSubmit: (e: FormEvent) => void
+    onChange: (data: FormData) => void
+}
+
+export interface FormData {
+    name: string
+    email: string
+    message: string
+    date: string
 }

@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router-dom";
-import {NavButton} from "./index";
+import {NavButton} from "../../index";
 import {CgClose, CgMenuGridO} from "react-icons/cg";
 import {useState} from "react";
 

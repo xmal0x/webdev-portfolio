@@ -1,0 +1,15 @@
+.line-number {
+    @apply text-gray-text mr-10
+}
+
+.line {
+    @apply text-blue-text flex
+}
+
+.const {
+    @apply text-yellow mr-2
+}
+
+.equal {
+    @apply text-yellow mx-2
+}

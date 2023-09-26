@@ -1,4 +1,3 @@
-import './App.css';
 import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import {About, Contacts, Home, Projects} from "./pages";
 import {Footer, Header} from "./components";
