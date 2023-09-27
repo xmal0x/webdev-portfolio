@@ -1,9 +1,9 @@
-import {Gallery} from "react-grid-gallery";
 import {aboutBio, images} from "../../../data";
-import Lightbox from "yet-another-react-lightbox";
 import React, {useState} from "react";
 import {CustomImage} from "../../../types";
 import {Textarea} from "../../index";
+import {Gallery} from "react-grid-gallery";
+import Lightbox from "yet-another-react-lightbox";
 
 const slides = images.map(({original, width, height}) => ({
     src: original,
@@ -19,11 +19,13 @@ const Bio = () => {
             <div className="flex-1">
                 <Textarea content={aboutBio}/>
             </div>
-            <div className="flex-1">
+            <div className="2xl:flex-1 flex-[0.75]">
                 <Gallery
                     images={images}
                     onClick={handleClick}
                     enableImageSelection={false}
+                    margin={5}
+                    rowHeight={220}
                 />
                 <Lightbox
                     slides={slides}

@@ -53,7 +53,8 @@ const Projects = () => {
                 </div>
 
                 <div className="sm:p-8 p-4 overflow-auto m-auto">
-                    <div className="md:grid flex flex-col 2xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-8">
+                    <div
+                        className="md:grid flex-col lg:grid-cols-3 grid-cols-2 gap-8">
                         {projectData.map(project => (
                             <ProjectCard {...project} key={project.id}/>
                         ))}

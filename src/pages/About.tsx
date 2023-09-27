@@ -43,10 +43,10 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
     return (
         <div
             onClick={() => handleClose()}
-            className="flex-1 lg:relative absolute inset-0 h-fit lg:m-0 m-4
+            className="flex-1 lg:relative absolute inset-0 md:h-fit h-full md:m-4
             lg:bg-inherit bg-second-dark-bg overflow-auto
             lg:border-none border border-secondary-gray rounded-sm">
-            <div className="flex-col md:p-8 p-4  flex overflow-auto">
+            <div className="flex-col md:p-8 p-4 flex overflow-auto">
                 <h4 className="sm:text-2xl text-xl text-white mb-2">{companyName}</h4>
                 <p className="sm:text-base text-sm">{datesData[0]}</p>
                 <p className="sm:text-sm text-xs mb-4">{datesData[1]}</p>

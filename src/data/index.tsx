@@ -1,4 +1,20 @@
-import {car_catalog, dashboard, earth_landing, ozz1} from "../assets";
+import {
+    car_catalog,
+    dashboard,
+    earth_landing,
+    photo1,
+    photo1_t,
+    photo2,
+    photo2_t,
+    photo3,
+    photo3_t,
+    photo4,
+    photo4_t,
+    photo5,
+    photo5_t,
+    photo6,
+    photo6_t
+} from "../assets";
 import {AiOutlineGithub} from "react-icons/ai";
 import React from "react";
 import {CareerStage, TextContent} from "../types";
@@ -51,7 +67,7 @@ export const projects = [
     {
         id: 1,
         title: 'car_catalog',
-        description: 'Search cars using filters',
+        description: 'Web application that provides information about automobiles',
         image: car_catalog,
         tags: ['tailwind', 'nextjs', 'react', 'typescript', 'nextauth', 'mongodb'],
         links: [
@@ -65,7 +81,7 @@ export const projects = [
     {
         id: 2,
         title: 'earth_life_landing',
-        description: 'Save Our Earth Landing Page',
+        description: 'This landing page is dedicated to making a positive impact on our planet.',
         image: earth_landing,
         tags: ['tailwind', 'react', 'typescript'],
         links: [
@@ -79,7 +95,7 @@ export const projects = [
     {
         id: 3,
         title: 'dashboard_interface',
-        description: 'Web interface with dashboard and chat',
+        description: 'This project is a versatile dashboard interface, with theme selection and chat interface.',
         image: dashboard,
         tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
         links: [
@@ -168,62 +184,45 @@ export const career: CareerStage[] = [
 
 export const images = [
     {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
+        src: photo1_t,
+        original: photo1,
+        width: 422,
+        height: 318,
+        caption: "high point",
     },
     {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
+        src: photo3_t,
+        original: photo3,
+        width: 318,
+        height: 422,
+        caption: "with Ozz at home",
     },
     {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
+        src: photo6_t,
+        original: photo6,
+        width: 478,
+        height: 466,
+        caption: "on the wall",
     },
     {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
+        src: photo5_t,
+        original: photo5,
+        width: 404,
+        height: 304,
+        caption: "wonderful world",
     },
     {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
-    }, {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
-    }, {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
-    }, {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
-    }, {
-        src: ozz1,
-        original: ozz1,
-        width: 320,
-        height: 212,
-        caption: "ozz",
+        src: photo2_t,
+        original: photo2,
+        width: 422,
+        height: 316,
+        caption: "with Ozz",
+    },
+    {
+        src: photo4_t,
+        original: photo4,
+        width: 318,
+        height: 422,
+        caption: "sweet life",
     },
 ]
