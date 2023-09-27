@@ -56,7 +56,7 @@ export interface Link {
 }
 
 export interface ContactFormProps {
-    onSubmit: () => void
+    onSubmit: () => Promise<boolean>
     onChange: (data: FormData) => void
 }
 

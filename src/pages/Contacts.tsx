@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {CodeForm, ContactForm, Sidebar} from "../components";
-import {HiGlobeAlt} from "react-icons/hi2";
-import {contacts} from "../constants";
+import React, {useState} from "react"
+import {CodeForm, ContactForm, Sidebar} from "../components"
+import {HiGlobeAlt} from "react-icons/hi2"
+import {contacts} from "../constants"
 import {FormData} from '../types'
-
+import emailjs from 'emailjs-com'
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -14,9 +14,24 @@ const Contacts = () => {
     })
 
     const handleSubmit = () => {
-        console.log(formData)
+        if (!process.env.REACT_APP_SERVICE_ID
+            || !process.env.REACT_APP_TEMPLATE_ID
+            || !process.env.REACT_APP_PUBLIC_KEY) {
+            throw new Error('Env vars is undefined')
+        }
 
-
+        return emailjs.send(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
+            formData,
+            process.env.REACT_APP_PUBLIC_KEY
+        ).then(
+            (result) => true,
+            error => {
+                console.error('error', error)
+                return false
+            }
+        )
     }
 
     const handleFormDataChange = (data: FormData) => {
@@ -29,7 +44,7 @@ const Contacts = () => {
                 <Sidebar>
                     <p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt
                         className="w-6 h-6 object-contain mr-2"/>Contacts</p>
-                    <ul className="pl-7 md:block hidden">
+                    <ul className="md:pl-7 ">
                         {contacts.map(({id, text, icon, link}) => (
                             <li key={id}>
                                 <a href={link} target="_blank" rel="noreferrer"

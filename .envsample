@@ -1,0 +1,3 @@
+REACT_APP_TEMPLATE_ID=your Template id from emailjs
+REACT_APP_SERVICE_ID=your service id from emailjs
+REACT_APP_PUBLIC_KEY=your public key from emailjs

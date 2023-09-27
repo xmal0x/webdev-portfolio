@@ -1,5 +1,5 @@
 import {HiEnvelope} from 'react-icons/hi2'
-import {FaFacebook, FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
+import {FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
 import {BsGithub, BsTelegram} from "react-icons/bs";
 import {Link} from "../types";
 
@@ -99,12 +99,6 @@ export const footerLinks: Link[] = [
     },
     {
         id: 3,
-        text: 'Facebook',
-        icon: <FaFacebook className="w-6 h-6 object-contain"/>,
-        link: 'https://www.facebook.com/kirill.galkin'
-    },
-    {
-        id: 4,
         text: 'Twitter',
         icon: <FaTwitter className="w-6 h-6 object-contain"/>,
         link: 'https://twitter.com/kira_galkin'

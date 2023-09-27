@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Web Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio project, which is currently in active development. Here, I showcase my skills and web
+development projects.
 
-## Available Scripts
+## About the Project
 
-In the project directory, you can run:
+This portfolio project is created using modern technologies and approaches. It's responsive and will display correctly
+on various devices and screens.
 
-### `yarn start`
+## Development Plans
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project is actively under development, and we are working on the following features:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Theme Switching:** Adding the functionality to switch between different themes or styles for the website.
+- **State Management:** Incorporating global state management to handle data and application state.
+- **Language Switching:** Adding the ability to choose different languages for the website with localization support.
 
-### `yarn test`
+We are always open to new ideas and suggestions, so feel free to propose your own enhancements to the project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `yarn build`
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/): A statically typed JavaScript.
+- [Tailwind CSS](https://tailwindcss.com/): A modern CSS framework.
+- [React Icons](https://react-icons.github.io/react-icons/): An icon library for React.
+- [react-grid-gallery](https://github.com/benhowell/react-grid-gallery): An image gallery component for React.
+- [yet-another-react-lightbox](https://github.com/chesco-yarza/yet-another-react-lightbox): A React Lightbox component.
+- [emailjs-com](https://www.emailjs.com/): A service for sending emails through JavaScript.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository to your computer:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this project locally, follow these steps:
 
-### `yarn eject`
+Clone the repository: Use the following command to clone the repository to your local machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+git clone https://github.com/xmal0x/webdev-portfolio.git
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the project directory: Enter the project directory using the following command.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+cd webdev-portfolio
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Create .env file and env variables
 
-## Learn More
+```
+REACT_APP_TEMPLATE_ID=your Template id from emailjs
+REACT_APP_SERVICE_ID=your service id from emailjs
+REACT_APP_PUBLIC_KEY=your public key from emailjs
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install dependencies: Install the necessary dependencies using npm or yarn.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm install
+# or
+yarn install
+```
+
+Start the development server: Run the development server to see the project in action.
+
+```
+npm start
+# or
+yarn start
+```
+
+Access the project: Open your web browser and go to http://localhost:3000
