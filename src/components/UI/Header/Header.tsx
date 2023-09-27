@@ -6,7 +6,7 @@ import {useState} from "react";
 const menuLinks = [
     {
         id: 1,
-        title: 'hello',
+        title: 'home',
         link: '/',
     },
     {
@@ -64,7 +64,7 @@ const Header = () => {
 
             {/*Dropdown Menu*/}
             {menuVisible && (
-                <ul className="bg-second-dark-bg absolute top-14 left-0 right-0 bottom-14 z-50">
+                <ul className="bg-second-dark-bg fixed top-14 left-0 right-0 bottom-14 z-50">
                     {menuLinks.map(({link, title, id}, index) => (
                         <li className="border-b border-secondary-gray p-4" onClick={() => setMenuVisible(false)}
                             key={id}>

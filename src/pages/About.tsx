@@ -2,11 +2,9 @@ import React, {useState} from "react";
 import {career} from "../data";
 import {infoSections, months} from "../constants";
 import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-icons/hi2"
-import {Sidebar, Timeline} from "../components";
+import {Bio, Education, Sidebar, Timeline} from "../components";
 import {CareerStage} from "../types";
 import "yet-another-react-lightbox/styles.css";
-import Bio from "../components/AboutMe/Bio/Bio";
-import Education from "../components/AboutMe/Education/Education";
 
 interface CareerStageProps {
     stage: CareerStage

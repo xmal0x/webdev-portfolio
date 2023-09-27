@@ -10,6 +10,8 @@ import Textarea from "./UI/Textarea/Textarea"
 
 import ContactForm from "./Contacts/ContactForm/ContactForm"
 import CodeForm from "./Contacts/CodeForm/CodeForm"
+import Bio from "./AboutMe/Bio/Bio";
+import Education from "./AboutMe/Education/Education";
 
 export {
     Footer,
@@ -22,5 +24,7 @@ export {
     TimelineItem,
     Textarea,
     ContactForm,
-    CodeForm
+    CodeForm,
+    Bio,
+    Education,
 }

@@ -90,48 +90,6 @@ export const projects = [
             },
         ]
     },
-    {
-        id: 4,
-        title: 'car_catalog',
-        description: 'Search cars using filters',
-        image: car_catalog,
-        tags: ['tailwind', 'nextjs', 'react', 'typescript', 'nextauth', 'mongodb'],
-        links: [
-            {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
-                url: 'https://github.com/xmal0x/carCat'
-            },
-        ]
-    },
-    {
-        id: 5,
-        title: 'dashboard_interface',
-        description: 'Web interface with dashboard and chat',
-        image: dashboard,
-        tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
-        links: [
-            {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
-                url: 'https://github.com/xmal0x/Dashboard'
-            },
-        ]
-    },
-    {
-        id: 6,
-        title: 'earth_life_landing',
-        description: 'Save Our Earth Landing Page',
-        image: earth_landing,
-        tags: ['tailwind', 'react', 'typescript'],
-        links: [
-            {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
-                url: 'https://github.com/xmal0x/earth-life-landing'
-            },
-        ]
-    },
 ]
 
 export const career: CareerStage[] = [

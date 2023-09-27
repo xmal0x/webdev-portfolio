@@ -18,7 +18,7 @@ const Footer = () => {
                     ))}
                 </div>
                 <div className="md:block hidden">
-                    <span>2023</span>
+                    <span>HoneySoft 2023</span>
                 </div>
             </div>
         </footer>
