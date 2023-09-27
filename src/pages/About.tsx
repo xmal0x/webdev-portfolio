@@ -96,7 +96,7 @@ const About = () => {
     }
 
     return (
-        <main className="mt-14 flex w-full flex-1 relative bg-main-dark-bg">
+        <main className="my-14 flex w-full flex-1 relative bg-main-dark-bg">
             <div className="flex text-white-text w-full mx-auto md:flex-row flex-col">
                 <Sidebar>
                     <p className="text-white-text items-center mb-4 md:flex hidden"><HiUserCircle

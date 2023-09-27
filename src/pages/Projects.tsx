@@ -24,7 +24,7 @@ const Projects = () => {
 
 
     return (
-        <main className="mt-14 flex w-full flex-1 relative bg-main-dark-bg overflow-auto">
+        <main className="my-14 flex w-full flex-1 relative bg-main-dark-bg overflow-auto">
             <div className="flex text-white-text w-full mx-auto md:flex-row flex-col">
                 <div className="md:block hidden">
                     <Sidebar>

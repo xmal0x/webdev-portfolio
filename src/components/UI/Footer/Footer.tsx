@@ -4,7 +4,7 @@ import {footerLinks} from "../../../constants";
 const Footer = () => {
     return (
         <footer
-            className="static w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray">
+            className="fixed bottom-0 w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray">
             <div className="flex justify-between sm:px-4 items-center h-full">
                 <div className="flex h-full items-center md:justify-start justify-between">
                     <span className="sm:block hidden md:w-48 w-32">find_me_in:</span>
