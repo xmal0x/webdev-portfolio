@@ -3,6 +3,8 @@ import './styles.css'
 import {ContactFormProps, FormData} from "../../../types";
 
 const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
+    const [sended, setSended] = useState(false)
+
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -20,32 +22,83 @@ const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-        onSubmit(e)
+        setFormData(prevState => ({...prevState, date: new Date().toLocaleDateString("en-EN")}))
+
+        setSended(true)
+        onSubmit()
+        setFormData({
+            name: '',
+            email: '',
+            message: '',
+            date: ''
+        })
+    }
+
+    const handleSendNewMessage = () => {
+        setSended(false)
+    }
+
+    const isDataValid = () => {
+        return formData.message.length > 0 && formData.email.length > 3 && formData.name.length > 0
     }
 
     return (
-        <form onSubmit={handleSubmit} className="form">
-            <label className="label">
-                name:
-                <input
-                    name="name"
-                    type="text"
-                    className="input"
-                    value={formData.name}
-                    onChange={handleChange}/>
-            </label>
-            <label className="label">
-                email:
-                <input name="email" type="email" className="input" value={formData.email} onChange={handleChange}/>
-            </label>
-            <label className="label">
-                message:
-                <textarea name="message" className="input resize-none" rows={8} value={formData.message}
-                          onChange={handleChange}/>
-            </label>
+        <>
+            {
+                sended
+                    ? (
+                        <div className="flex flex-col w-full gap-4 items-center">
+                            <h4 className="text-2xl text-white">Thank you!</h4>
+                            <p className="max-w-sm text-center mb-6">Your message has been sent. I will respond to you
+                                shortly.</p>
+                            <button className="button" onClick={handleSendNewMessage}>send_new_message</button>
+                        </div>
+                    )
+                    : (
+                        <form onSubmit={handleSubmit} className="form">
+                            <label className="label">
+                                name:
+                                <input
+                                    name="name"
+                                    type="text"
+                                    className="input"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    placeholder="Your name..."
+                                />
+                            </label>
+                            <label className="label">
+                                email:
+                                <input
+                                    name="email"
+                                    type="email"
+                                    className="input"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    placeholder="Your email..."
+                                />
+                            </label>
+                            <label className="label">
+                                message:
+                                <textarea
+                                    name="message"
+                                    className="input resize-none"
+                                    rows={8}
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Your message..."
+                                />
+                            </label>
 
-            <button type="submit" className="submit">submit_message</button>
-        </form>
+                            <button type="submit" className={`button self-end ${!isDataValid() ? 'disabled' : ''}`}
+                                    disabled={!isDataValid()}>submit_message
+                            </button>
+                        </form>
+                    )
+            }
+        </>
+
+
     )
 }
 

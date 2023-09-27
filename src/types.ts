@@ -1,4 +1,4 @@
-import React, {FormEvent} from "react";
+import React from "react";
 import {Image} from "react-grid-gallery";
 
 export interface NavButtonProps {
@@ -56,7 +56,7 @@ export interface Link {
 }
 
 export interface ContactFormProps {
-    onSubmit: (e: FormEvent) => void
+    onSubmit: () => void
     onChange: (data: FormData) => void
 }
 

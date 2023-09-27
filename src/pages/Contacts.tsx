@@ -1,4 +1,4 @@
-import React, {FormEvent, useState} from "react";
+import React, {useState} from "react";
 import {CodeForm, ContactForm, Sidebar} from "../components";
 import {HiGlobeAlt} from "react-icons/hi2";
 import {contacts} from "../constants";
@@ -13,12 +13,13 @@ const Contacts = () => {
         email: ''
     })
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = () => {
+        console.log(formData)
+
 
     }
 
     const handleFormDataChange = (data: FormData) => {
-        console.log(data)
         setFormData(data)
     }
 
@@ -39,12 +40,11 @@ const Contacts = () => {
                         ))}
                     </ul>
                 </Sidebar>
-
                 <div className="flex-1 flex items-center justify-center p-4">
                     <ContactForm onSubmit={handleSubmit} onChange={handleFormDataChange}/>
                 </div>
 
-                <div className="bg-second-dark-bg flex-1 flex items-center justify-center p-4">
+                <div className="bg-second-dark-bg flex-1 lg:flex hidden items-center justify-center p-4">
                     <CodeForm data={formData}/>
                 </div>
             </div>
