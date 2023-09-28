@@ -18,6 +18,7 @@ import {
 import {AiOutlineGithub} from "react-icons/ai";
 import React from "react";
 import {CareerStage, TextContent} from "../types";
+import {FaPlayCircle} from "react-icons/fa";
 
 export const aboutBio: TextContent = {
     title: 'Hello everyone!',
@@ -72,9 +73,14 @@ export const projects = [
         tags: ['tailwind', 'nextjs', 'react', 'typescript', 'nextauth', 'mongodb'],
         links: [
             {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
+                icon: <AiOutlineGithub className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Code',
                 url: 'https://github.com/xmal0x/carCat'
+            },
+            {
+                icon: <FaPlayCircle className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Demo',
+                url: 'https://car-ld4hgg1ib-xmal0xs-projects.vercel.app/'
             },
         ]
     },
@@ -86,9 +92,14 @@ export const projects = [
         tags: ['tailwind', 'react', 'typescript'],
         links: [
             {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
+                icon: <AiOutlineGithub className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Code',
                 url: 'https://github.com/xmal0x/earth-life-landing'
+            },
+            {
+                icon: <FaPlayCircle className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Demo',
+                url: 'https://earth-life-landing.vercel.app/'
             },
         ]
     },
@@ -100,9 +111,14 @@ export const projects = [
         tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
         links: [
             {
-                icon: <AiOutlineGithub className="w-8 h-8 object-contain text-second-dark-bg"/>,
-                title: 'github',
+                icon: <AiOutlineGithub className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Code',
                 url: 'https://github.com/xmal0x/Dashboard'
+            },
+            {
+                icon: <FaPlayCircle className="w-6 h-6 object-contain mr-2"/>,
+                title: 'Demo',
+                url: 'https://dashboard-tau-brown.vercel.app/'
             },
         ]
     },

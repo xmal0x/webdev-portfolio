@@ -4,26 +4,37 @@ import React from "react";
 export const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps) => {
 
     return (
-        <div>
+        <div className="relative mb-8">
+
             <div className="flex mb-4 flex-wrap">
                 <h4 className="text-blue-text mr-2">Project:</h4>
                 <p>{title}</p>
             </div>
 
             <div
-                className="hover:border-blue-text relative transition duration-300 max-w-sm lg:h-80 h-fit flex justify-between flex-col rounded-sm overflow-hidden border border-secondary-gray">
+                className="hover:border-blue-text group relative transition duration-200 max-w-sm lg:h-80 h-fit flex justify-between flex-col rounded-sm overflow-hidden border border-secondary-gray">
+                <div
+                    className="transition duration-200 absolute inset-0 flex flex-col group-hover:opacity-100 opacity-0 justify-center items-center">
+                    <div className="w-full opacity-80 bg-second-dark-bg h-full absolute">
+                    </div>
+                    {links.map(({icon, title, url}) => (
+                        <a
+                            href={url}
+                            rel="noreferrer"
+                            target="_blank"
+                            title={title}
+                            className="z-50 flex items-center justify-center py-2 px-6 border
+                            border-secondary-gray rounded bg-main-dark-bg
+                            hover:text-white hover:bg-second-dark-bg hover:shadow
+                            transition-colors duration-200 mb-2"
+                        >
+                            {icon} {title}
+                        </a>
+                    ))}
+                </div>
+
                 <div>
                     <img className="w-full md:h-36 object-cover object-left-top" src={image} alt={title}/>
-                    {links.map(link => (
-                        <div className="absolute top-2 right-2 p-0.5 rounded-full bg-white bg-opacity-90"
-                             key={link.url}>
-                            <a
-                                href={link.url}
-                                rel="noreferrer"
-                                target="_blank"
-                                title={link.title}>{link.icon}</a>
-                        </div>
-                    ))}
                     <div className="px-6 py-4">
                         <p>{description}</p>
                     </div>

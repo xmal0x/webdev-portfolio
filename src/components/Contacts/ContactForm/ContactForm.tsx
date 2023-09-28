@@ -1,6 +1,7 @@
 import React, {ChangeEvent, FormEvent, useEffect, useState} from "react";
 import './styles.css'
 import {ContactFormProps, FormData} from "../../../types";
+import {Button} from "../../index";
 
 const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
     const [sended, setSended] = useState(false)
@@ -101,10 +102,15 @@ const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
                                     />
                                 </label>
 
-                                <button type="submit"
-                                        className={`button self-end ${!isDataValid() || loading ? 'disabled' : ''}`}
-                                        disabled={!isDataValid()}>{!loading ? 'send_message' : 'sending...'}
-                                </button>
+                                {/*<button type="submit"*/}
+                                {/*        className={`button self-end ${!isDataValid() || loading ? 'disabled' : ''}`}*/}
+                                {/*        disabled={!isDataValid()}>{!loading ? 'send_message' : 'sending...'}*/}
+                                {/*</button>*/}
+                                <Button
+                                    type="submit" disabled={!isDataValid()}
+                                    text={!loading ? 'send_message' : 'sending...'}
+                                    className={`self-end ${!isDataValid() || loading ? 'disabled' : ''}`}
+                                />
                             </form>
 
                             {error.length > 0 &&

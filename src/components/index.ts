@@ -1,7 +1,7 @@
 import Footer from "./UI/Footer/Footer"
 import Header from "./UI/Header/Header"
 import Timeline from "./AboutMe/Timeline/Timeline"
-
+import Button from "./UI/Button/Button"
 import NavButton from "./UI/NavButton/NavButton"
 import Sidebar from "./UI/Sidebar/Sidebar"
 import {ProjectCard} from "./Projects/ProjectCard/ProjectCard"
@@ -27,4 +27,6 @@ export {
     CodeForm,
     Bio,
     Education,
+
+    Button
 }

@@ -66,3 +66,11 @@ export interface FormData {
     message: string
     date: string
 }
+
+export interface ButtonProps {
+    type: 'button' | 'submit'
+    disabled: boolean
+    text: string
+    className?: string
+    children?: React.ReactNode
+}

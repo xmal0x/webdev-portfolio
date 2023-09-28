@@ -1,0 +1,4 @@
+.button {
+    @apply w-fit py-2 px-4 border border-secondary-gray rounded bg-main-dark-bg
+    hover:text-white hover:bg-second-dark-bg hover:shadow transition-colors duration-200
+}

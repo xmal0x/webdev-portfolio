@@ -29,9 +29,9 @@ const Header = () => {
         <>
             <header className="fixed z-50 w-full bg-second-dark-bg text-gray-text h-14 border-b border-secondary-gray">
                 {/*Desktop*/}
-                <nav className="justify-between items-center h-full m-auto px-4 md:flex hidden">
+                <nav className="justify-between items-center h-full m-auto md:flex hidden">
                     <div className="flex h-full items-center">
-                        <Link to={'/'} className="md:w-48 w-32 md:mr-0 mr-4">
+                        <Link to={'/'} className="md:w-48 w-32 md:mr-0 mr-4 pl-4">
                             <span>kirill_galkin</span>
                         </Link>
                         {menuLinks.map((link, index) => (
