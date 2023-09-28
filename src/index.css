@@ -10,3 +10,15 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.contacts-icon {
+    @apply w-4 h-4 object-contain
+}
+
+.footer-link-icon {
+    @apply w-6 h-6 object-contain
+}
+
+.skill-icon {
+    @apply w-16 h-16 object-contain
+}

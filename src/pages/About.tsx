@@ -115,9 +115,6 @@ const About = () => {
                             </li>
                         ))}
                     </ul>
-
-                    {/*<p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt*/}
-                    {/*    className="w-6 h-6 object-contain mr-2"/> contacts</p>*/}
                 </Sidebar>
 
                 <div className="text-gray-text md:p-8 p-4 flex-1">
