@@ -1,8 +1,8 @@
-import {ProjectCard, Sidebar} from "../components";
+import {ProjectCard, Sidebar} from "../../components";
 import {HiOutlineAdjustmentsVertical, HiOutlineCheck} from 'react-icons/hi2'
 import React, {ChangeEvent, useState} from "react";
-import {filters} from "../constants";
-import {projects} from "../data";
+import {filters} from "../../constants";
+import {projects} from "../../data";
 
 const Projects = () => {
     const [checked, setChecked] = useState<string[]>([])
@@ -31,16 +31,16 @@ const Projects = () => {
                         <p className="text-white-text items-center mb-4 flex ">
                             <HiOutlineAdjustmentsVertical className="h-6 w-6 object-contain mr-2"/>projects</p>
 
-                        <ul className="pl-7 mb-8">
+                        <ul className="pl-8 mb-8">
                             {filters.map(filter => (
                                 <div key={filter.id} className="flex items-center mb-2 group">
                                     <input value={filter.value} type="checkbox" id={filter.value}
                                            className="group-hover:border-white relative cursor-pointer peer
-                                       appearance-none mr-2 w-5 h-5 rounded border-2 border-gray-text
+                                       appearance-none mr-4 w-5 h-5 rounded border-2 border-gray-text
                                        bg-second-dark-bg checked:bg-blue-text checked:border-0"
                                            onChange={handleCheck}
                                     />
-                                    <div>{filter.image}</div>
+                                    {filter.icon}
                                     <label htmlFor={filter.value}
                                            className={`cursor-pointer group-hover:text-white ${checked.includes(filter.value) ? 'text-white-text' : ''}`}>{filter.title}</label>
                                     <HiOutlineCheck

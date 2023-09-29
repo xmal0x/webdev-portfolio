@@ -22,3 +22,7 @@ body {
 .skill-icon {
     @apply w-16 h-16 object-contain
 }
+
+.filter-icon {
+    @apply w-4 h-4 object-contain mr-1
+}

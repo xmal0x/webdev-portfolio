@@ -7,6 +7,7 @@ import {
     SiDotnet,
     SiExpress,
     SiJavascript,
+    SiMongodb,
     SiNextdotjs,
     SiPostgresql,
     SiTailwindcss,
@@ -60,37 +61,37 @@ export const filters = [
         id: 1,
         title: 'React',
         value: 'react',
-        image: ''
+        icon: <FaReact className="filter-icon"/>
     },
     {
         id: 2,
         title: 'Typescript',
         value: 'typescript',
-        image: ''
+        icon: <SiTypescript className="filter-icon"/>
     },
     {
         id: 3,
         title: 'Javascript',
         value: 'javascript',
-        image: ''
+        icon: <SiJavascript className="filter-icon"/>
     },
     {
         id: 4,
         title: 'Next.js',
         value: 'nextjs',
-        image: ''
+        icon: <SiNextdotjs className="filter-icon"/>
     },
     {
         id: 5,
         title: 'Tailwind',
         value: 'tailwind',
-        image: ''
+        icon: <SiTailwindcss className="filter-icon"/>
     },
     {
         id: 6,
         title: 'MongoDB',
         value: 'mongodb',
-        image: ''
+        icon: <SiMongodb className="filter-icon"/>
     },
 ]
 

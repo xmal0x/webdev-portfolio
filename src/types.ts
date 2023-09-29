@@ -74,3 +74,8 @@ export interface ButtonProps {
     className?: string
     children?: React.ReactNode
 }
+
+export interface CareerStageProps {
+    stage: CareerStage
+    onClose: () => void
+}

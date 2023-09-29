@@ -1,8 +1,8 @@
 import React, {useState} from "react"
-import {CodeForm, ContactForm, Sidebar} from "../components"
+import {CodeForm, ContactForm, Sidebar} from "../../components"
 import {HiGlobeAlt} from "react-icons/hi2"
-import {contacts} from "../constants"
-import {FormData} from '../types'
+import {contacts} from "../../constants"
+import {FormData} from '../../types'
 import emailjs from 'emailjs-com'
 
 const Contacts = () => {
