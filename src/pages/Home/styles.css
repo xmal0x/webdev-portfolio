@@ -1,3 +1,23 @@
-.link {
+.home-link {
     @apply text-blue-text hover:underline
+}
+
+.home-container {
+    @apply flex justify-center items-center text-white w-full flex-1 bg-main-dark-bg
+}
+
+.home-content {
+    @apply flex flex-col gap-1 text-base max-w-7xl p-4
+}
+
+.home_text {
+    @apply text-2xl
+}
+
+.home-head_text {
+    @apply text-7xl
+}
+
+.home-subhead_text {
+    @apply mb-10 text-4xl text-blue-text
 }

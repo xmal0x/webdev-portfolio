@@ -4,6 +4,7 @@ import {infoSections} from "../../constants";
 import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-icons/hi2"
 import {Bio, Education, Sidebar, Stage, Timeline} from "../../components";
 import {CareerStage} from "../../types";
+import './styles.css'
 import "yet-another-react-lightbox/styles.css";
 
 enum contentType {
@@ -39,22 +40,22 @@ const About = () => {
     }
 
     return (
-        <main className="my-14 flex w-full flex-1 relative bg-main-dark-bg">
-            <div className="flex text-white-text w-full mx-auto md:flex-row flex-col">
+        <main className="about-container">
+            <div className="about-content">
                 <Sidebar>
                     <p className="text-white-text items-center mb-4 md:flex hidden"><HiUserCircle
                         className="w-6 h-6 object-contain mr-2"/> personal_info</p>
-                    <ul className="md:pl-7 md:mb-8">
+                    <ul className="md:pl-8 md:mb-8">
                         {infoSections.map(({id, title}) => (
                             <li key={id}
                                 onClick={() => handleSelectContent(id)}
                                 className={`flex items-center hover:text-white cursor-pointer mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
-                                <span className="w-4 h-4 object-contain mr-2">
+                                <span className="about-sidebar_icon">
                                     {isSelected(id)
                                         ? <HiChevronDown/>
                                         : <HiChevronRight/>}
                                 </span>
-                                <span className="w-4 h-4 object-contain mr-2"><HiFolderOpen
+                                <span className="about-sidebar_icon"><HiFolderOpen
                                     className={isSelected(id) ? 'text-blue-text' : ''}/></span>
                                 {title}
                             </li>

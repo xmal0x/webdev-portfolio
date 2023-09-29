@@ -66,7 +66,7 @@ const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
                         </div>
                     )
                     : (
-                        <div className="flex flex-col w-full justify-center items-center">
+                        <div className="flex-center flex-col w-full">
                             <form onSubmit={handleSubmit} className="form">
                                 <label className="label">
                                     name:
@@ -102,10 +102,6 @@ const ContactForm = ({onSubmit, onChange}: ContactFormProps) => {
                                     />
                                 </label>
 
-                                {/*<button type="submit"*/}
-                                {/*        className={`button self-end ${!isDataValid() || loading ? 'disabled' : ''}`}*/}
-                                {/*        disabled={!isDataValid()}>{!loading ? 'send_message' : 'sending...'}*/}
-                                {/*</button>*/}
                                 <Button
                                     type="submit" disabled={!isDataValid()}
                                     text={!loading ? 'send_message' : 'sending...'}

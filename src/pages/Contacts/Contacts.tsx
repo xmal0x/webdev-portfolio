@@ -44,7 +44,7 @@ const Contacts = () => {
                 <Sidebar>
                     <p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt
                         className="w-6 h-6 object-contain mr-2"/>Contacts</p>
-                    <ul className="md:pl-7 ">
+                    <ul className="md:pl-8 ">
                         {contacts.map(({id, text, icon, link}) => (
                             <li key={id}>
                                 <a href={link} target="_blank" rel="noreferrer"
@@ -55,7 +55,7 @@ const Contacts = () => {
                         ))}
                     </ul>
                 </Sidebar>
-                <div className="flex-1 flex items-center justify-center p-4">
+                <div className="flex-1 flex-center p-4">
                     <ContactForm onSubmit={handleSubmit} onChange={handleFormDataChange}/>
                 </div>
 

@@ -16,14 +16,9 @@ const CodeForm = ({data}: CodeFormProps) => {
             <SyntaxHighlighter
                 language="javascript"
                 style={nightOwl}
-                // showLineNumbers={true}
-                // wrapLongLines={true}
                 wrapLines={true}
                 customStyle={{margin: 0}}
                 lineProps={{style: {wordBreak: 'break-word', whiteSpace: 'break-spaces'}}}
-                // customStyle={{
-                //     backgroundColor: '#161D29',
-                // }}
             >
                 {`const button = document.querySelector('#sendBtn')
 const data = {

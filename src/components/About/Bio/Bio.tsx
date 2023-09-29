@@ -19,7 +19,7 @@ const Bio = () => {
             <div className="flex-1">
                 <Textarea content={aboutBio}/>
             </div>
-            <div className="2xl:flex-1 flex-[0.75]">
+            <div className="2xl:flex-1 flex-[0.75] my-auto">
                 <Gallery
                     images={images}
                     onClick={handleClick}

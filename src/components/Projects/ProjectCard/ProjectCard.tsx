@@ -12,9 +12,12 @@ export const ProjectCard = ({title, tags, image, description, links}: ProjectCar
             </div>
 
             <div
-                className="hover:border-blue-text group relative transition duration-200 max-w-sm lg:h-80 h-fit flex justify-between flex-col rounded-sm overflow-hidden border border-secondary-gray">
+                className="hover:border-blue-text group relative transition duration-200 max-w-sm
+                lg:h-80 h-fit flex justify-between flex-col rounded-sm overflow-hidden border
+                border-secondary-gray">
                 <div
-                    className="transition duration-200 absolute inset-0 flex flex-col group-hover:opacity-100 opacity-0 justify-center items-center">
+                    className="transition duration-200 absolute inset-0 flex-center flex-col
+                    group-hover:opacity-100 opacity-0">
                     <div className="w-full opacity-80 bg-second-dark-bg h-full absolute">
                     </div>
                     {links.map(({icon, title, url}) => (
@@ -23,7 +26,7 @@ export const ProjectCard = ({title, tags, image, description, links}: ProjectCar
                             rel="noreferrer"
                             target="_blank"
                             title={title}
-                            className="z-50 flex items-center justify-center py-2 px-6 border
+                            className="z-50 flex-center py-2 px-6 border
                             border-secondary-gray rounded bg-main-dark-bg
                             hover:text-white hover:bg-second-dark-bg hover:shadow
                             transition-colors duration-200 mb-2"
