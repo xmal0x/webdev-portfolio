@@ -11,7 +11,7 @@ const Education = () => {
             <div className="flex-center flex-[0.75]">
                 <div className="flex gap-8 flex-wrap justify-center">
                     {skills.map(({title, icon}) => (
-                        <span className="hover:text-white h-fit" title={title}>{icon}</span>
+                        <span className="hover:text-white h-fit" title={title} key={title}>{icon}</span>
                     ))}
                 </div>
             </div>

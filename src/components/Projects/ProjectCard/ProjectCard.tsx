@@ -22,6 +22,7 @@ export const ProjectCard = ({title, tags, image, description, links}: ProjectCar
                     </div>
                     {links.map(({icon, title, url}) => (
                         <a
+                            key={url}
                             href={url}
                             rel="noreferrer"
                             target="_blank"
