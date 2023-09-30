@@ -3,6 +3,7 @@ import {NavButton} from "../../index";
 import {CgClose, CgMenuGridO} from "react-icons/cg";
 import {Fragment, useState} from "react";
 import {Transition} from "@headlessui/react";
+import './styles.css'
 
 const menuLinks = [
     {
@@ -74,27 +75,24 @@ const Header = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
             >
-
                 <ul className="bg-second-dark-bg fixed top-14 left-0 right-0 bottom-14 z-50">
                     {menuLinks.map(({link, title, id}, index) => (
-                        <li className="border-b border-secondary-gray p-4" onClick={() => setMenuVisible(false)}
+                        <li className="border-b border-secondary-gray" onClick={() => setMenuVisible(false)}
                             key={id}>
                             <NavLink
                                 to={link}
                                 className={({isActive}) =>
-                                    `${isActive ? 'text-white-text' : ''} 
-                        h-full items-center text-gray-text flex hover:text-white`}>
+                                    `${isActive ? 'text-white-text' : ''} nav-link`}>
                                 <span className="px-4">{title}</span>
                             </NavLink>
                         </li>
                     ))}
 
-                    <li className="border-b border-secondary-gray p-4" onClick={() => setMenuVisible(false)}>
+                    <li className="border-b border-secondary-gray" onClick={() => setMenuVisible(false)}>
                         <NavLink
                             to="/contacts"
                             className={({isActive}) =>
-                                `${isActive ? 'text-white-text' : ''} 
-                        h-full items-center text-gray-text flex hover:text-white`}>
+                                `${isActive ? 'text-white-text' : ''} nav-link`}>
 
                             <span className="px-4">contact_me</span>
                         </NavLink>

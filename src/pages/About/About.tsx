@@ -49,7 +49,7 @@ const About = () => {
                     {infoSections.map(({id, title}) => (
                         <li key={id}
                             onClick={() => handleSelectContent(id)}
-                            className={`flex items-center hover:text-white cursor-pointer mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
+                            className={`flex items-center hover:text-white cursor-pointer transition duration-300 mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
                                 <span className="about-sidebar_icon">
                                     {isSelected(id)
                                         ? <HiChevronDown/>
