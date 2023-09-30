@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import './styles.css'
+import {withOpacityTransition} from "../../hoc";
 
 const Home = () => {
     return (
@@ -21,7 +22,7 @@ const Home = () => {
 
             </div>
         </main>
-    );
-};
+    )
+}
 
-export default Home;
+export default withOpacityTransition(Home)

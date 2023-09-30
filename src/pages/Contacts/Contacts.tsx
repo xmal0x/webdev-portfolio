@@ -4,6 +4,7 @@ import {HiGlobeAlt} from "react-icons/hi2"
 import {contacts} from "../../constants"
 import {FormData} from '../../types'
 import emailjs from 'emailjs-com'
+import {withOpacityTransition, withPageStyles} from "../../hoc";
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -39,33 +40,30 @@ const Contacts = () => {
     }
 
     return (
-        <main className="my-14 flex w-full flex-1 relative bg-main-dark-bg">
-            <div className="flex text-gray-text w-full mx-auto md:flex-row flex-col">
-                <Sidebar>
-                    <p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt
-                        className="w-6 h-6 object-contain mr-2"/>Contacts</p>
-                    <ul className="md:pl-8 ">
-                        {contacts.map(({id, text, icon, link}) => (
-                            <li key={id}>
-                                <a href={link} target="_blank" rel="noreferrer"
-                                   className='flex items-center hover:text-white cursor-pointer mb-2 gap-2'>
-                                    {icon} {text}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </Sidebar>
-                <div className="flex-1 flex-center p-4">
-                    <ContactForm onSubmit={handleSubmit} onChange={handleFormDataChange}/>
-                </div>
-
-                <div className="bg-second-dark-bg flex-1 lg:flex hidden items-center justify-center p-4">
-                    <CodeForm data={formData}/>
-                </div>
+        <div className="flex text-gray-text w-full mx-auto md:flex-row flex-col">
+            <Sidebar>
+                <p className="text-white-text items-center mb-4 md:flex hidden"><HiGlobeAlt
+                    className="w-6 h-6 object-contain mr-2"/>Contacts</p>
+                <ul className="md:pl-8 ">
+                    {contacts.map(({id, text, icon, link}) => (
+                        <li key={id}>
+                            <a href={link} target="_blank" rel="noreferrer"
+                               className='flex items-center hover:text-white cursor-pointer mb-2 gap-2'>
+                                {icon} {text}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </Sidebar>
+            <div className="flex-1 flex-center p-4">
+                <ContactForm onSubmit={handleSubmit} onChange={handleFormDataChange}/>
             </div>
 
-        </main>
+            <div className="bg-second-dark-bg flex-1 lg:flex hidden items-center justify-center p-4">
+                <CodeForm data={formData}/>
+            </div>
+        </div>
     )
 }
 
-export default Contacts
+export default withOpacityTransition(withPageStyles(Contacts))

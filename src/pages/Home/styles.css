@@ -3,7 +3,7 @@
 }
 
 .home-container {
-    @apply flex justify-center items-center text-white w-full flex-1 bg-main-dark-bg
+    @apply flex my-14 justify-center items-center text-white w-full flex-1 bg-main-dark-bg
 }
 
 .home-content {

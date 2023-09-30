@@ -1,7 +1,8 @@
 import {Link, NavLink} from "react-router-dom";
 import {NavButton} from "../../index";
 import {CgClose, CgMenuGridO} from "react-icons/cg";
-import {useState} from "react";
+import {Fragment, useState} from "react";
+import {Transition} from "@headlessui/react";
 
 const menuLinks = [
     {
@@ -63,7 +64,17 @@ const Header = () => {
             </header>
 
             {/*Dropdown Menu*/}
-            {menuVisible && (
+            <Transition
+                show={menuVisible}
+                as={Fragment}
+                enter="transition-opacity duration-100"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-100"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+            >
+
                 <ul className="bg-second-dark-bg fixed top-14 left-0 right-0 bottom-14 z-50">
                     {menuLinks.map(({link, title, id}, index) => (
                         <li className="border-b border-secondary-gray p-4" onClick={() => setMenuVisible(false)}
@@ -89,7 +100,8 @@ const Header = () => {
                         </NavLink>
                     </li>
                 </ul>
-            )}
+            </Transition>
+
         </>
     );
 };

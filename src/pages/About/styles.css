@@ -1,6 +1,3 @@
-.about-container {
-    @apply my-14 flex w-full flex-1 relative bg-main-dark-bg
-}
 
 .about-content {
     @apply flex text-white-text w-full mx-auto md:flex-row flex-col

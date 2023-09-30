@@ -6,6 +6,7 @@ import {Bio, Education, Sidebar, Stage, Timeline} from "../../components";
 import {CareerStage} from "../../types";
 import './styles.css'
 import "yet-another-react-lightbox/styles.css";
+import {withOpacityTransition, withPageStyles} from "../../hoc";
 
 enum contentType {
     about = 1,
@@ -40,48 +41,46 @@ const About = () => {
     }
 
     return (
-        <main className="about-container">
-            <div className="about-content">
-                <Sidebar>
-                    <p className="text-white-text items-center mb-4 md:flex hidden"><HiUserCircle
-                        className="w-6 h-6 object-contain mr-2"/> personal_info</p>
-                    <ul className="md:pl-8 md:mb-8">
-                        {infoSections.map(({id, title}) => (
-                            <li key={id}
-                                onClick={() => handleSelectContent(id)}
-                                className={`flex items-center hover:text-white cursor-pointer mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
+        <div className="about-content">
+            <Sidebar>
+                <p className="text-white-text items-center mb-4 md:flex hidden"><HiUserCircle
+                    className="w-6 h-6 object-contain mr-2"/> personal_info</p>
+                <ul className="md:pl-8 md:mb-8">
+                    {infoSections.map(({id, title}) => (
+                        <li key={id}
+                            onClick={() => handleSelectContent(id)}
+                            className={`flex items-center hover:text-white cursor-pointer mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
                                 <span className="about-sidebar_icon">
                                     {isSelected(id)
                                         ? <HiChevronDown/>
                                         : <HiChevronRight/>}
                                 </span>
-                                <span className="about-sidebar_icon"><HiFolderOpen
-                                    className={isSelected(id) ? 'text-blue-text' : ''}/></span>
-                                {title}
-                            </li>
-                        ))}
-                    </ul>
-                </Sidebar>
+                            <span className="about-sidebar_icon"><HiFolderOpen
+                                className={isSelected(id) ? 'text-blue-text' : ''}/></span>
+                            {title}
+                        </li>
+                    ))}
+                </ul>
+            </Sidebar>
 
-                <div className="text-gray-text md:p-8 p-4 flex-1">
-                    {getContent(selectedSectionId)}
-                </div>
-
-                {careerStage ?
-                    <>
-                        <div className="lg:hidden absolute bg-black opacity-70 inset-0"
-                             onClick={() => setCareerStage(undefined)}>
-                        </div>
-                        <Stage stage={careerStage} key={careerStage.id} onClose={() => setCareerStage(undefined)}/>
-                    </>
-                    : <>{isSelected(contentType.experience) &&
-                        <div className="md:flex hidden justify-center items-center flex-1">
-                            <p>Select the stage you are interested in</p>
-                        </div>}</>
-                }
+            <div className="text-gray-text md:p-8 p-4 flex-1">
+                {getContent(selectedSectionId)}
             </div>
-        </main>
-    );
-};
 
-export default About;
+            {careerStage ?
+                <>
+                    <div className="lg:hidden absolute bg-black opacity-70 inset-0"
+                         onClick={() => setCareerStage(undefined)}>
+                    </div>
+                    <Stage stage={careerStage} key={careerStage.id} onClose={() => setCareerStage(undefined)}/>
+                </>
+                : <>{isSelected(contentType.experience) &&
+                    <div className="md:flex hidden justify-center items-center flex-1">
+                        <p>Select the stage you are interested in</p>
+                    </div>}</>
+            }
+        </div>
+    )
+}
+
+export default withOpacityTransition(withPageStyles(About))
