@@ -1,3 +1,6 @@
+import {AiOutlineGithub} from "react-icons/ai"
+import {FaPlayCircle} from "react-icons/fa"
+
 import {
     car_catalog,
     dashboard,
@@ -14,11 +17,8 @@ import {
     photo5_t,
     photo6,
     photo6_t
-} from "../assets";
-import {AiOutlineGithub} from "react-icons/ai";
-import React from "react";
-import {CareerStage, TextContent} from "../types";
-import {FaPlayCircle} from "react-icons/fa";
+} from "../assets"
+import {CareerStage, TextContent} from "../types"
 
 export const aboutBio: TextContent = {
     title: 'Hello everyone!',

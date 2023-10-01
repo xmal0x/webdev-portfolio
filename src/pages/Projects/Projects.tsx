@@ -7,21 +7,25 @@ import {filters} from "../../constants"
 import {projects} from "../../data"
 
 const Projects = () => {
-    const [selectedFilters, setSelectedFilters] = useState<string[]>([])
+    const [selectedFilters, setSelectedFilters] = useState(new Set<string>())
     const [projectData, setProjectData] = useState(projects)
 
     const handleCheck = ({target}: ChangeEvent<HTMLInputElement>) => {
-        const updated = target.checked
-            ? [...selectedFilters, target.value]
-            : selectedFilters.filter(tag => tag !== target.value)
+        const {value} = target
 
-        const filteredProjects = updated.length > 0
+        const updatedFilters = new Set(selectedFilters);
+
+        updatedFilters.has(value)
+            ? updatedFilters.delete(value)
+            : updatedFilters.add(value)
+
+        const filteredProjects = updatedFilters.size > 0
             ? projects.filter(project =>
-                updated.every(tag => project.tags.includes(tag)))
+                Array.from(updatedFilters).every(filter => project.tags.includes(filter)))
             : projects
 
         setProjectData(filteredProjects)
-        setSelectedFilters(updated)
+        setSelectedFilters(updatedFilters)
     }
 
 
@@ -43,7 +47,7 @@ const Projects = () => {
                                 />
                                 {filter.icon}
                                 <label htmlFor={filter.value}
-                                       className={`cursor-pointer group-hover:text-white ${selectedFilters.includes(filter.value) ? 'text-white-text' : ''}`}>{filter.title}</label>
+                                       className={`cursor-pointer group-hover:text-white ${selectedFilters.has(filter.value) ? 'text-white-text' : ''}`}>{filter.title}</label>
                                 <HiOutlineCheck
                                     className="w-4 h-4 ml-0.5 absolute hidden peer-checked:block cursor-pointer pointer-events-none text-second-dark-bg"
                                     strokeWidth={4}/>

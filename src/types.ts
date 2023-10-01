@@ -1,9 +1,9 @@
-import React, {ChangeEvent, FormEvent} from "react";
-import {Image} from "react-grid-gallery";
+import React, {ChangeEvent, FormEvent} from "react"
+import {Image} from "react-grid-gallery"
 
 export interface NavButtonProps {
-    link: string,
-    title: string,
+    link: string
+    title: string
     showRightBorder?: boolean
 }
 

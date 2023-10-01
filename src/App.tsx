@@ -1,6 +1,7 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-import {About, Contacts, Home, Projects} from "./pages";
-import {Footer, Header} from "./components";
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom"
+
+import {About, Contacts, Home, Projects} from "./pages"
+import {Footer, Header} from "./components"
 
 const App = () => {
     const Layout = () => (
@@ -39,4 +40,4 @@ const App = () => {
     return <RouterProvider router={router}/>
 }
 
-export default App;
+export default App

@@ -1,8 +1,7 @@
 import {HiEnvelope} from 'react-icons/hi2'
-import {FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa";
-import {BsGithub, BsTelegram} from "react-icons/bs";
-import {Link} from "../types";
-import {FaAngular, FaCss3, FaDocker, FaFigma, FaGit, FaNodeJs, FaReact, FaSass} from "react-icons/fa6";
+import {FaInstagram, FaLinkedin, FaTwitter} from "react-icons/fa"
+import {BsGithub, BsTelegram} from "react-icons/bs"
+import {FaAngular, FaCss3, FaDocker, FaFigma, FaGit, FaNodeJs, FaReact, FaSass} from "react-icons/fa6"
 import {
     SiDotnet,
     SiExpress,
@@ -12,7 +11,9 @@ import {
     SiPostgresql,
     SiTailwindcss,
     SiTypescript
-} from "react-icons/si";
+} from "react-icons/si"
+
+import {Link} from "../types"
 
 export const infoSections = [
     {
