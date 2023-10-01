@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
+import {withOpacityTransition} from "../../hoc"
+
 import './styles.css'
-import {withOpacityTransition} from "../../hoc";
 
 const Home = () => {
     return (

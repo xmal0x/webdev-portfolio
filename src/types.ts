@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ChangeEvent, FormEvent} from "react";
 import {Image} from "react-grid-gallery";
 
 export interface NavButtonProps {
@@ -78,4 +78,44 @@ export interface ButtonProps {
 export interface CareerStageProps {
     stage: CareerStage
     onClose: () => void
+}
+
+export interface CodeFormProps {
+    data: FormData
+}
+
+export interface FormProps {
+    onSubmit: (e: FormEvent) => Promise<void>
+    name: string
+    email: string
+    message: string
+    onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+    loading: boolean
+    error: string
+}
+
+export interface SuccessMessageProps {
+    text: string
+    onSendNewMessage: () => void
+}
+
+export interface FooterLinkProps {
+    link: string
+    icon: React.ReactNode
+    isLast: boolean
+}
+
+export interface DropdownMenuProps {
+    isVisible: boolean
+    onClose: () => void
+}
+
+export interface SideBarProps {
+    children: React.ReactNode
+}
+
+export interface DropdownLinkProps {
+    onClose: () => void
+    link: string
+    title: string
 }

@@ -1,5 +1,6 @@
-import {ButtonProps} from "../../../types";
 import './styles.css'
+
+import {ButtonProps} from "../../../types"
 
 const Button = ({type, disabled, text, className = ''}: ButtonProps) => {
     return (

@@ -4,15 +4,16 @@ import Timeline from "./About/Timeline/Timeline"
 import Button from "./UI/Button/Button"
 import NavButton from "./UI/NavButton/NavButton"
 import Sidebar from "./Layout/Sidebar/Sidebar"
-import {ProjectCard} from "./Projects/ProjectCard/ProjectCard"
+import ProjectCard from "./Projects/ProjectCard/ProjectCard"
 import TimelineItem from "./UI/TimelineItem/TimelineItem"
 import Textarea from "./UI/Textarea/Textarea"
 
 import ContactForm from "./Contacts/ContactForm/ContactForm"
 import CodeForm from "./Contacts/CodeForm/CodeForm"
-import Bio from "./About/Bio/Bio";
-import Education from "./About/Education/Education";
-import {Stage} from "./About/Stage/Stage"
+import BioSection from "./About/Bio/BioSection"
+import EducationSection from "./About/Education/EducationSection"
+import Stage from "./About/Stage/Stage"
+import DropdownMenu from "./UI/DropdownMenu/DropdownMenu"
 
 export {
     Footer,
@@ -26,8 +27,9 @@ export {
     Textarea,
     ContactForm,
     CodeForm,
-    Bio,
-    Education,
+    BioSection,
+    EducationSection,
     Stage,
-    Button
+    Button,
+    DropdownMenu
 }

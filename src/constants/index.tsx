@@ -183,3 +183,21 @@ export const skills = [
         icon: <FaGit className="skill-icon"/>
     },
 ]
+
+export const menuLinks = [
+    {
+        id: 1,
+        title: 'home',
+        link: '/',
+    },
+    {
+        id: 2,
+        title: 'about_me',
+        link: '/about',
+    },
+    {
+        id: 3,
+        title: 'projects',
+        link: '/projects',
+    },
+]

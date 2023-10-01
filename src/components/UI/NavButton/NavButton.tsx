@@ -1,9 +1,11 @@
-import {NavLink} from "react-router-dom";
-import {NavButtonProps} from "../../../types";
+import {NavLink} from "react-router-dom"
+
+import {NavButtonProps} from "../../../types"
 
 const NavButton = ({link, title, showRightBorder = false}: NavButtonProps) => {
     return (
-        <div className={`border-l ${showRightBorder ? 'border-r' : ''} h-full border-secondary-gray`}>
+        <div
+            className={`border-l ${showRightBorder ? 'border-r' : ''} h-full border-secondary-gray hover:bg-main-dark-bg`}>
             <NavLink
                 to={link}
                 className={({isActive}) =>

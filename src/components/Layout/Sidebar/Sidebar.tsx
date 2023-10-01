@@ -1,9 +1,6 @@
-import React from 'react';
-import {Transition} from "@headlessui/react";
+import {Transition} from "@headlessui/react"
 
-export interface SideBarProps {
-    children: React.ReactNode
-}
+import {SideBarProps} from "../../../types"
 
 const Sidebar = ({children}: SideBarProps) => {
     return (
@@ -16,6 +13,7 @@ const Sidebar = ({children}: SideBarProps) => {
 const SidebarWithTransition = ({children}: SideBarProps) => {
     return (
         <>
+            {/* Desktop */}
             <Transition
                 appear={true}
                 show={true}
@@ -32,6 +30,7 @@ const SidebarWithTransition = ({children}: SideBarProps) => {
                 </Sidebar>
             </Transition>
 
+            {/* Mobile/Tablet */}
             <Transition
                 appear={true}
                 show={true}
@@ -48,7 +47,7 @@ const SidebarWithTransition = ({children}: SideBarProps) => {
                 </Sidebar>
             </Transition>
         </>
-    );
-};
+    )
+}
 
 export default SidebarWithTransition

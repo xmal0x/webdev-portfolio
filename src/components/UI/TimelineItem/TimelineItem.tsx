@@ -1,8 +1,8 @@
-import {TimeLineItemProps} from "../../../types";
-import React from "react";
+import {TimeLineItemProps} from "../../../types"
 
 const TimelineItem = ({careerStage, onSelect}: TimeLineItemProps) => {
     const {companyName, start, end, position, technology} = careerStage
+
     return (
         <li className="relative group" onClick={onSelect}>
             <span className="absolute -left-[7px] bg-white rounded-full h-3 w-3 group-hover:bg-blue-text"></span>

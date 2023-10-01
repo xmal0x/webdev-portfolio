@@ -1,18 +1,19 @@
-import {ProjectCard, Sidebar} from "../../components";
+import React, {ChangeEvent, useState} from "react"
 import {HiOutlineAdjustmentsVertical, HiOutlineCheck} from 'react-icons/hi2'
-import React, {ChangeEvent, useState} from "react";
-import {filters} from "../../constants";
-import {projects} from "../../data";
-import {withOpacityTransition, withPageStyles} from "../../hoc";
+import {ProjectCard, Sidebar} from "../../components"
+import {withOpacityTransition, withPageStyles} from "../../hoc"
+
+import {filters} from "../../constants"
+import {projects} from "../../data"
 
 const Projects = () => {
-    const [checked, setChecked] = useState<string[]>([])
+    const [selectedFilters, setSelectedFilters] = useState<string[]>([])
     const [projectData, setProjectData] = useState(projects)
 
     const handleCheck = ({target}: ChangeEvent<HTMLInputElement>) => {
         const updated = target.checked
-            ? [...checked, target.value]
-            : checked.filter(tag => tag !== target.value)
+            ? [...selectedFilters, target.value]
+            : selectedFilters.filter(tag => tag !== target.value)
 
         const filteredProjects = updated.length > 0
             ? projects.filter(project =>
@@ -20,12 +21,11 @@ const Projects = () => {
             : projects
 
         setProjectData(filteredProjects)
-        setChecked(updated)
+        setSelectedFilters(updated)
     }
 
 
     return (
-        // <main className="my-14 flex w-full flex-1 relative bg-main-dark-bg">
         <div className="flex text-white-text w-full mx-auto md:flex-row flex-col">
             <div className="md:flex hidden">
                 <Sidebar>
@@ -43,7 +43,7 @@ const Projects = () => {
                                 />
                                 {filter.icon}
                                 <label htmlFor={filter.value}
-                                       className={`cursor-pointer group-hover:text-white ${checked.includes(filter.value) ? 'text-white-text' : ''}`}>{filter.title}</label>
+                                       className={`cursor-pointer group-hover:text-white ${selectedFilters.includes(filter.value) ? 'text-white-text' : ''}`}>{filter.title}</label>
                                 <HiOutlineCheck
                                     className="w-4 h-4 ml-0.5 absolute hidden peer-checked:block cursor-pointer pointer-events-none text-second-dark-bg"
                                     strokeWidth={4}/>
@@ -62,8 +62,7 @@ const Projects = () => {
                 </div>
             </div>
         </div>
-        // </main>
-    );
-};
+    )
+}
 
 export default withOpacityTransition(withPageStyles(Projects))

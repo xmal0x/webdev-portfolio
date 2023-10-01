@@ -1,31 +1,17 @@
-import {Link, NavLink} from "react-router-dom";
-import {NavButton} from "../../index";
-import {CgClose, CgMenuGridO} from "react-icons/cg";
-import {Fragment, useState} from "react";
-import {Transition} from "@headlessui/react";
+import {Link} from "react-router-dom"
+import {CgClose, CgMenuGridO} from "react-icons/cg"
+import {useState} from "react"
+
+import {DropdownMenu, NavButton} from "../../index"
+
 import './styles.css'
 
-const menuLinks = [
-    {
-        id: 1,
-        title: 'home',
-        link: '/',
-    },
-    {
-        id: 2,
-        title: 'about_me',
-        link: '/about',
-    },
-    {
-        id: 3,
-        title: 'projects',
-        link: '/projects',
-    },
-]
-
+import {menuLinks} from "../../../constants"
 
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false)
+
+    const toggleMenu = () => setMenuVisible(!menuVisible)
 
     return (
         <>
@@ -54,7 +40,7 @@ const Header = () => {
 
                     <button
                         className="hover:text-white"
-                        onClick={() => setMenuVisible(prevState => !prevState)}
+                        onClick={toggleMenu}
                     >
                         {menuVisible
                             ? <CgClose className="w-8 h-8 object-contain"/>
@@ -65,43 +51,9 @@ const Header = () => {
             </header>
 
             {/*Dropdown Menu*/}
-            <Transition
-                show={menuVisible}
-                as={Fragment}
-                enter="transition-opacity duration-100"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-100"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-            >
-                <ul className="bg-second-dark-bg fixed top-14 left-0 right-0 bottom-14 z-50">
-                    {menuLinks.map(({link, title, id}, index) => (
-                        <li className="border-b border-secondary-gray" onClick={() => setMenuVisible(false)}
-                            key={id}>
-                            <NavLink
-                                to={link}
-                                className={({isActive}) =>
-                                    `${isActive ? 'text-white-text' : ''} nav-link`}>
-                                <span className="px-4">{title}</span>
-                            </NavLink>
-                        </li>
-                    ))}
-
-                    <li className="border-b border-secondary-gray" onClick={() => setMenuVisible(false)}>
-                        <NavLink
-                            to="/contacts"
-                            className={({isActive}) =>
-                                `${isActive ? 'text-white-text' : ''} nav-link`}>
-
-                            <span className="px-4">contact_me</span>
-                        </NavLink>
-                    </li>
-                </ul>
-            </Transition>
-
+            <DropdownMenu isVisible={menuVisible} onClose={() => setMenuVisible(false)}/>
         </>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

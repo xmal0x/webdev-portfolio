@@ -1,14 +1,21 @@
-import {FormData} from "../../../types"
-import './styles.css'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism";
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism"
 
-export interface CodeFormProps {
-    data: FormData
-}
+import './styles.css'
+
+import {CodeFormProps} from "../../../types"
 
 //TODO make more easy
 const CodeForm = ({data}: CodeFormProps) => {
+    const code = `const button = document.querySelector('#sendBtn')
+const data = {
+    name: '${data.name}',
+    email: '${data.email}',
+    message: '${data.message}',
+}
+
+button.addEventListener('click', () => {form.send(message))}`
+
     return (
 
         <div
@@ -20,14 +27,7 @@ const CodeForm = ({data}: CodeFormProps) => {
                 customStyle={{margin: 0}}
                 lineProps={{style: {wordBreak: 'break-word', whiteSpace: 'break-spaces'}}}
             >
-                {`const button = document.querySelector('#sendBtn')
-const data = {
-    name: '${data.name}',
-    email: '${data.email}',
-    message: '${data.message}',
-}
-
-button.addEventListener('click', () => {form.send(message))}`}
+                {code}
             </SyntaxHighlighter>
         </div>
     )

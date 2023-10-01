@@ -1,12 +1,15 @@
-import React, {useState} from "react";
-import {career} from "../../data";
-import {infoSections} from "../../constants";
+import React, {useState} from "react"
 import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-icons/hi2"
-import {Bio, Education, Sidebar, Stage, Timeline} from "../../components";
-import {CareerStage} from "../../types";
+import "yet-another-react-lightbox/styles.css"
+
+import {BioSection, EducationSection, Sidebar, Stage, Timeline} from "../../components"
+import {withOpacityTransition, withPageStyles} from "../../hoc"
+import {CareerStage} from "../../types"
+
 import './styles.css'
-import "yet-another-react-lightbox/styles.css";
-import {withOpacityTransition, withPageStyles} from "../../hoc";
+
+import {infoSections} from "../../constants"
+import {career} from "../../data"
 
 enum contentType {
     about = 1,
@@ -28,15 +31,17 @@ const About = () => {
     const getContent = (id: number) => {
         switch (id) {
             case contentType.about:
-                return <Bio/>
+                return <BioSection/>
             case contentType.education:
-                return <Education/>
+                return <EducationSection/>
             case contentType.experience:
                 return (
                     <div className="md:flex-row flex-col">
                         <Timeline career={career} onSelect={setCareerStage}/>
                     </div>
                 )
+            default:
+                return null
         }
     }
 

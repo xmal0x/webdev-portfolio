@@ -1,10 +1,12 @@
-import React, {useState} from "react"
-import {CodeForm, ContactForm, Sidebar} from "../../components"
-import {HiGlobeAlt} from "react-icons/hi2"
-import {contacts} from "../../constants"
-import {FormData} from '../../types'
+import React, {useEffect, useState} from "react"
 import emailjs from 'emailjs-com'
-import {withOpacityTransition, withPageStyles} from "../../hoc";
+import {HiGlobeAlt} from "react-icons/hi2"
+
+import {CodeForm, ContactForm, Sidebar} from "../../components"
+import {withOpacityTransition, withPageStyles} from "../../hoc"
+
+import {FormData} from '../../types'
+import {contacts} from "../../constants"
 
 const Contacts = () => {
     const [formData, setFormData] = useState({
@@ -14,18 +16,20 @@ const Contacts = () => {
         email: ''
     })
 
-    const handleSubmit = () => {
+    useEffect(() => {
         if (!process.env.REACT_APP_SERVICE_ID
             || !process.env.REACT_APP_TEMPLATE_ID
             || !process.env.REACT_APP_PUBLIC_KEY) {
             throw new Error('Env vars is undefined')
         }
+    }, []);
 
+    const handleSubmit = () => {
         return emailjs.send(
-            process.env.REACT_APP_SERVICE_ID,
-            process.env.REACT_APP_TEMPLATE_ID,
+            process.env.REACT_APP_SERVICE_ID!,
+            process.env.REACT_APP_TEMPLATE_ID!,
             formData,
-            process.env.REACT_APP_PUBLIC_KEY
+            process.env.REACT_APP_PUBLIC_KEY!
         ).then(
             (result) => true,
             error => {

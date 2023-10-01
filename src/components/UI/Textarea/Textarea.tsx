@@ -1,5 +1,4 @@
-import React from "react";
-import {TextareaProps} from "../../../types";
+import {TextareaProps} from "../../../types"
 
 const Textarea = ({content}: TextareaProps) => {
     const {title, paragraphs} = content
@@ -7,7 +6,11 @@ const Textarea = ({content}: TextareaProps) => {
     return (
         <>
             {title.length > 0 && <h4 className="mb-4">{title}</h4>}
-            {paragraphs.map(p => <p className="mb-2" key={p}>{p}</p>)}
+            {paragraphs.map(p =>
+                <p className="mb-2" key={p}>
+                    {p}
+                </p>
+            )}
         </>
     )
 }

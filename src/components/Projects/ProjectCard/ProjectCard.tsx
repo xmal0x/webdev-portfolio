@@ -1,7 +1,6 @@
-import {ProjectCardProps} from "../../../types";
-import React from "react";
+import {ProjectCardProps} from "../../../types"
 
-export const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps) => {
+const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps) => {
 
     return (
         <div className="relative mb-8">
@@ -54,3 +53,5 @@ export const ProjectCard = ({title, tags, image, description, links}: ProjectCar
         </div>
     )
 }
+
+export default ProjectCard

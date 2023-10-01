@@ -1,7 +1,8 @@
-import {months} from "../../../constants";
-import {CareerStageProps} from "../../../types";
+import {CareerStageProps} from "../../../types"
 
-const geFormatDatesWithDiff = (start: Date, end: Date) => {
+import {months} from "../../../constants"
+
+const geFormattedDatesWithDiff = (start: Date, end: Date) => {
     const startYear = start.getFullYear()
     const startMonth = start.getMonth()
     const endYear = end.getFullYear()
@@ -17,17 +18,15 @@ const geFormatDatesWithDiff = (start: Date, end: Date) => {
     return [`${months[startMonth]} ${startYear} - ${months[endMonth]} ${endYear}`, `${yearDiff} yr ${monthDiff + 1} mos`]
 }
 
-export const Stage = ({stage, onClose}: CareerStageProps) => {
+const Stage = ({stage, onClose}: CareerStageProps) => {
     const {companyName, end, position, technology, tasks, start} = stage
 
-    const datesData = geFormatDatesWithDiff(start, end)
-
-    const handleClose = () => onClose()
+    const datesData = geFormattedDatesWithDiff(start, end)
 
     return (
-        <div
-            onClick={() => handleClose()}
-            className="flex-1 lg:relative absolute inset-0 md:h-fit h-full md:m-4
+        <section
+            onClick={onClose}
+            className="flex-1 lg:relative absolute inset-0 md:h-fit h-full
             lg:bg-inherit bg-second-dark-bg overflow-auto
             lg:border-none border border-secondary-gray rounded-sm">
             <div className="flex-col md:p-8 p-4 flex overflow-auto">
@@ -47,6 +46,8 @@ export const Stage = ({stage, onClose}: CareerStageProps) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
+
+export default Stage

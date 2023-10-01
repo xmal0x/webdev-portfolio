@@ -1,10 +1,11 @@
-import {Textarea} from "../../index";
-import {aboutEducation} from "../../../data";
-import {skills} from "../../../constants";
+import {Textarea} from "../../index"
 
-const Education = () => {
+import {skills} from "../../../constants"
+import {aboutEducation} from "../../../data"
+
+const EducationSection = () => {
     return (
-        <div className="flex w-full lg:flex-row flex-col gap-8">
+        <section className="flex w-full lg:flex-row flex-col gap-8">
             <div className="flex-1">
                 <Textarea content={aboutEducation}/>
             </div>
@@ -15,8 +16,8 @@ const Education = () => {
                     ))}
                 </div>
             </div>
-        </div>
-    );
-};
+        </section>
+    )
+}
 
-export default Education;
+export default EducationSection
