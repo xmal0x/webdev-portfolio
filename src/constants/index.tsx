@@ -71,12 +71,6 @@ export const filters = [
         icon: <SiTypescript className="filter-icon"/>
     },
     {
-        id: 3,
-        title: 'Javascript',
-        value: 'javascript',
-        icon: <SiJavascript className="filter-icon"/>
-    },
-    {
         id: 4,
         title: 'Next.js',
         value: 'nextjs',

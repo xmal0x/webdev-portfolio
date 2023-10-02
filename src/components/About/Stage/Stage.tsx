@@ -1,6 +1,7 @@
 import {CareerStageProps} from "../../../types"
 
 import {months} from "../../../constants"
+import {CgClose} from "react-icons/cg";
 
 const geFormattedDatesWithDiff = (start: Date, end: Date) => {
     const startYear = start.getFullYear()
@@ -25,7 +26,6 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
 
     return (
         <section
-            onClick={onClose}
             className="flex-1 lg:relative absolute inset-0 md:h-fit h-full
             lg:bg-inherit bg-second-dark-bg overflow-auto text-gray-text
             lg:border-none border border-secondary-gray rounded-sm">
@@ -50,6 +50,15 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
                     ))}
                 </div>
             </div>
+            {/*{showCloseBtn &&*/}
+            <button
+                className="md:hidden text-second-dark-bg block p-2 opacity-70 rounded-full bg-white border-2 border-white fixed bottom-20 right-6 z-50"
+                type="button"
+                onClick={onClose}
+            >
+                <CgClose className=" w-8 h-8 object-contain "/>
+            </button>
+            {/*}*/}
         </section>
     )
 }

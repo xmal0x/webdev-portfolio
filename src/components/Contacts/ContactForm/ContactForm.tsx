@@ -5,6 +5,11 @@ import './styles.css'
 
 import {ContactFormProps, FormData, FormProps, SuccessMessageProps} from "../../../types"
 
+const validateEmail = (email: string) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}$/
+    return emailRegex.test(email);
+}
+
 const SuccessMessage = ({text, onSendNewMessage}: SuccessMessageProps) => {
     return (
         <div className="flex flex-col w-full gap-4 items-center">
@@ -15,11 +20,25 @@ const SuccessMessage = ({text, onSendNewMessage}: SuccessMessageProps) => {
     )
 }
 
-
 const Form = ({onSubmit, onChange, message, email, loading, name, error}: FormProps) => {
 
+    const [errorMessage, setErrorMessage] = useState<string>('')
+
+    const validateEmailInput = () => {
+        if (!validateEmail(email)) {
+            setErrorMessage('email is not valid')
+        } else {
+            setErrorMessage('')
+        }
+    }
+
+    const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        validateEmailInput()
+        onChange(e)
+    }
+
     const isDataValid = () => {
-        return message.length > 0 && email.length > 3 && name.length > 0
+        return message.length > 0 && email.length > 3 && name.length > 0 && !errorMessage
     }
 
     return (
@@ -36,16 +55,18 @@ const Form = ({onSubmit, onChange, message, email, loading, name, error}: FormPr
                         placeholder="Your name..."
                     />
                 </label>
-                <label className="label">
+                <label className="label relative">
                     email:
                     <input
                         name="email"
                         type="email"
                         className="input"
                         value={email}
-                        onChange={onChange}
+                        onChange={handleEmailChange}
                         placeholder="Your email..."
+                        onBlur={validateEmailInput}
                     />
+                    {errorMessage && <p className="absolute right-0 text-red-400">{errorMessage}</p>}
                 </label>
                 <label className="label">
                     message:

@@ -19,7 +19,7 @@ button.addEventListener('click', () => {form.send(message))}`
     return (
 
         <div
-            className="bg-second-dark-bg rounded border border-secondary-gray overflow-auto text-yellow w-full md:text-sm text-xs">
+            className="bg-second-dark-bg rounded border border-secondary-gray overflow-auto text-yellow w-full max-h-96 md:text-sm text-xs">
             <SyntaxHighlighter
                 language="javascript"
                 style={nightOwl}

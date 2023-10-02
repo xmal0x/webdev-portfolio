@@ -86,7 +86,7 @@ export const projects = [
     },
     {
         id: 2,
-        title: 'earth_life_landing',
+        title: 'earth_life',
         description: 'This landing page is dedicated to making a positive impact on our planet.',
         image: earth_landing,
         tags: ['tailwind', 'react', 'typescript'],
@@ -105,7 +105,7 @@ export const projects = [
     },
     {
         id: 3,
-        title: 'dashboard_interface',
+        title: 'dashboard',
         description: 'This project is a versatile dashboard interface, with theme selection and chat interface.',
         image: dashboard,
         tags: ['tailwind', 'react', 'typescript', 'apexcharts'],
