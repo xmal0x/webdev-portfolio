@@ -5,9 +5,9 @@ const Textarea = ({content}: TextareaProps) => {
 
     return (
         <>
-            {title.length > 0 && <h4 className="mb-4">{title}</h4>}
+            {title.length > 0 && <h4 className="mb-6 text-xl">{title}</h4>}
             {paragraphs.map(p =>
-                <p className="mb-2" key={p}>
+                <p className="mb-6" key={p}>
                     {p}
                 </p>
             )}

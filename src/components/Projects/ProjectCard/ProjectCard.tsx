@@ -38,7 +38,7 @@ const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps)
 
                 <div>
                     <img className="w-full md:h-36 object-cover object-left-top" src={image} alt={title}/>
-                    <div className="px-6 py-4">
+                    <div className="px-6 py-4 text-gray-text">
                         <p>{description}</p>
                     </div>
                 </div>

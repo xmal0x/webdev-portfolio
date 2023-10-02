@@ -27,12 +27,16 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
         <section
             onClick={onClose}
             className="flex-1 lg:relative absolute inset-0 md:h-fit h-full
-            lg:bg-inherit bg-second-dark-bg overflow-auto
+            lg:bg-inherit bg-second-dark-bg overflow-auto text-gray-text
             lg:border-none border border-secondary-gray rounded-sm">
             <div className="flex-col md:p-8 p-4 flex overflow-auto">
-                <h4 className="sm:text-2xl text-xl text-white mb-2">{companyName}</h4>
-                <p className="sm:text-base text-sm">{datesData[0]}</p>
-                <p className="sm:text-sm text-xs mb-4">{datesData[1]}</p>
+                <div className="flex flex-row">
+                    <div>
+                        <h4 className="sm:text-2xl text-xl text-white mb-2">{companyName}</h4>
+                        <p className="sm:text-base text-sm">{datesData[0]}</p>
+                        <p className="sm:text-sm text-xs mb-4">{datesData[1]}</p>
+                    </div>
+                </div>
                 <p className="sm:text-xl text-base text-white mb-4">{position}</p>
                 <div className="mb-4 flex flex-wrap sm:text-base text-sm">
                     {tasks.map(t => (

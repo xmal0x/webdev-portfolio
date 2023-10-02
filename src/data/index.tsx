@@ -23,44 +23,44 @@ import {CareerStage, TextContent} from "../types"
 export const aboutBio: TextContent = {
     title: 'Hello everyone!',
     paragraphs: [
-        `My name is Kirill, and I'm a web developer:)`,
-        `I've been involved in development for over 7 years now. 
-        I started with .NET on the backend but transitioned to full-stack development, and it seems that's 
-        where I truly appreciated the beauty of frontend work. For a long time, I worked with Angular, 
-        but recently, I've been captivated by React, and I can't seem to get enough of it at the moment.`,
-        `In my work, I highly value teamwork because, in my opinion,
-        a good team can salvage a bad project, while a bad team can ruin a good project.
-        I'm open to learning new things, i believe that continuous learning is the key to success in our industry.
-        So feel free to reach out with any questions.`,
-        `Furthermore, aside from my work, I have a passion for traveling, playing the guitar, and indulging in street
-        photography. I find these hobbies to be a great source of inspiration and creativity. I'm also the proud
-        owner of a wonderful Griffon dog named Ozzy, who is my loyal companion on my adventures.`,
-        `If you have any projects, ideas, or simply interesting propositions,
-        please don't hesitate to get in touch.
-        I'm always ready for new challenges and look forward to the opportunity to
-        collaborate with you.`
+        `My name is Kirill`,
+
+        `I began my professional journey in 2014, starting with backend development and later transitioning to frontend. 
+        I worked with Angular for an extended period, but currently, my preference is React, and I'm thrilled about it`,
+
+        `I'm not a fan of overengineering, as I believe that beauty lies in simplicity (like Nirvana's songs;)). 
+        My primary skill is the ability to solve tasks within tight deadlines. 
+        I also place great value on teamwork because I believe that a good team can rescue even a challenging project, 
+        while a poor one can spoil a good one. 
+        I'm always open to learning new technologies and consider continuous learning the key to success!`,
+
+        `I find inspiration in traveling, playing the guitar, and street photography. 
+        I have a wonderful dog named Ozzy who is always by my side on my adventures`,
+
+        `If you have any projects, ideas, or interesting proposals, please don't hesitate to get in touch. 
+        I'm always ready for new challenges!`,
+
+        `I look forward to the opportunity to collaborate`
     ]
 }
 
 export const aboutEducation: TextContent = {
-    title: 'Some words about my education.',
+    title: 'Some words about my background',
     paragraphs: [
-        `I hold an engineering degree and graduated from the Faculty of Radio Engineering and Electronics,
-            specializing
-            in Multichannel Telecommunication Systems. After working as an engineer for several years, I found myself
-            increasingly drawn to software development.`,
-        `My educational background in engineering has provided me with a strong foundation in problem-solving and
-            analytical thinking, which I have found to be valuable in my transition to a software development career. I
-            enjoy the continuous learning process that comes with programming and always strive to expand my knowledge
-            and
-            skill set. This commitment to ongoing education allows me to stay current with the ever-evolving landscape
-            of
-            technology and programming languages.`,
-        `If you have any questions or opportunities for collaboration, please don't hesitate to reach out. I'm
-            dedicated
-            to delivering high-quality work and am excited to be a part of innovative projects in the software
-            development
-            field.`
+        `I successfully completed my studies at the Faculty of Radio Engineering and Electronics and earned an engineering degree.
+        After several years of working in this field, my passion for software development grew stronger`,
+
+        `My education has equipped me with solid problem-solving skills and analytical thinking. 
+        I appreciate the continuous learning process that accompanies programming, 
+        and I always strive to expand my knowledge and skills, both through self-study and by taking various courses`,
+
+        `Throughout my professional career, I have worked as a backend developer, full-stack developer, and currently, 
+        I have focused on frontend development, which brings me great satisfaction. 
+        Thanks to diverse roles and projects, 
+        I have accumulated a wealth of experience working with various technologies and solving a wide range of problems`,
+
+        `If you have any questions or if you have interesting collaboration proposals, please feel free to reach out to me!`,
+        `I am always open to discussions and look forward to potential collaborations`,
     ]
 }
 
