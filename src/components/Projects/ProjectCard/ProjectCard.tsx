@@ -12,7 +12,7 @@ const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps)
 
             <div
                 className="hover:border-blue-text group relative transition duration-200 max-w-sm
-                lg:h-80 h-fit flex justify-between flex-col rounded-sm overflow-hidden border
+                h-fit min-h-[24rem] flex justify-between flex-col rounded-sm overflow-hidden border
                 border-secondary-gray">
                 <div
                     className="transition duration-200 absolute inset-0 flex-center flex-col

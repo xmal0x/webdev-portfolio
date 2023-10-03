@@ -16,7 +16,7 @@ const FooterLink = ({link, isLast, icon}: FooterLinkProps) => {
 const Footer = () => {
     return (
         <footer
-            className="fixed bottom-0 w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray">
+            className="fixed bottom-0 w-full bg-second-dark-bg text-gray-text h-14 border-t border-secondary-gray z-40">
             <div className="flex justify-between items-center h-full">
                 <div className="flex h-full w-full items-center md:justify-start justify-between">
                     <span className="md:w-48 w-32 pl-4 flex">find_me_in:</span>

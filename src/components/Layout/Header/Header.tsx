@@ -15,7 +15,8 @@ const Header = () => {
 
     return (
         <>
-            <header className="fixed z-50 w-full bg-second-dark-bg text-gray-text h-14 border-b border-secondary-gray">
+            <header
+                className="fixed w-full bg-second-dark-bg text-gray-text h-14 border-b border-secondary-gray z-40">
                 {/*Desktop*/}
                 <nav className="justify-between items-center h-full m-auto md:flex hidden">
                     <div className="flex h-full items-center">
