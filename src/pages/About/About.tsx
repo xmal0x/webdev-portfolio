@@ -1,49 +1,17 @@
-import React, {useState} from "react"
+import React from "react"
 import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-icons/hi2"
 import "yet-another-react-lightbox/styles.css"
+import {NavLink, Outlet} from "react-router-dom";
 
-import {BioSection, EducationSection, Sidebar, Stage, Timeline} from "../../components"
+import {Sidebar} from "../../components"
 import {withOpacityTransition, withPageStyles} from "../../hoc"
-import {CareerStage} from "../../types"
 
 import './styles.css'
 
 import {infoSections} from "../../constants"
-import {career} from "../../data"
 
-enum contentType {
-    about = 1,
-    education = 2,
-    experience = 3
-}
 
 const About = () => {
-    const [selectedSectionId, setSelectedSectionId] = useState(1)
-    const isSelected = (id: number) => selectedSectionId === id
-
-    const [careerStage, setCareerStage] = useState<CareerStage | undefined>(undefined)
-
-    const handleSelectContent = (id: number) => {
-        setSelectedSectionId(id)
-        setCareerStage(undefined)
-    }
-
-    const getContent = (id: number) => {
-        switch (id) {
-            case contentType.about:
-                return <BioSection/>
-            case contentType.education:
-                return <EducationSection/>
-            case contentType.experience:
-                return (
-                    <div className="md:flex-row flex-col">
-                        <Timeline career={career} onSelect={setCareerStage}/>
-                    </div>
-                )
-            default:
-                return null
-        }
-    }
 
     return (
         <div className="about-content">
@@ -51,39 +19,31 @@ const About = () => {
                 <p className="text-white-text items-center mb-4 md:flex hidden"><HiUserCircle
                     className="w-6 h-6 object-contain mr-2"/> personal_info</p>
                 <ul className="md:pl-8 md:mb-8">
-                    {infoSections.map(({id, title}) => (
-                        <li key={id}
-                            onClick={() => handleSelectContent(id)}
-                            className={`flex items-center hover:text-white cursor-pointer transition duration-300 mb-2 ${isSelected(id) ? 'text-white-text' : ''}`}>
-                                <span className="about-sidebar_icon">
-                                    {isSelected(id)
-                                        ? <HiChevronDown/>
-                                        : <HiChevronRight/>}
-                                </span>
-                            <span className="about-sidebar_icon"><HiFolderOpen
-                                className={isSelected(id) ? 'text-blue-text' : ''}/></span>
-                            {title}
+                    {infoSections.map(({id, title, to}) => (
+                        <li key={id} className="mb-2">
+                            <NavLink
+                                to={to}
+                                className={({isActive}) =>
+                                    `${isActive ? 'text-white-text' : 'text-gray-text'} hover:text-white duration-300 transition`
+                                }
+                            >
+                                {({isActive}) => (
+                                    <span className="flex gap-2 items-center">
+                                        {isActive ? <HiChevronDown/> : <HiChevronRight/>}
+                                        <span className="about-sidebar_icon"><HiFolderOpen
+                                            className={isActive ? 'text-blue-text' : ''}/></span>
+                                        {title}
+                                    </span>
+                                )}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>
             </Sidebar>
 
             <div className="text-gray-text md:p-8 p-4 flex-1">
-                {getContent(selectedSectionId)}
+                <Outlet/>
             </div>
-
-            {careerStage ?
-                <>
-                    <div className="lg:hidden absolute bg-black opacity-70 inset-0"
-                         onClick={() => setCareerStage(undefined)}>
-                    </div>
-                    <Stage stage={careerStage} key={careerStage.id} onClose={() => setCareerStage(undefined)}/>
-                </>
-                : <>{isSelected(contentType.experience) &&
-                    <div className="md:flex hidden justify-center items-center flex-1">
-                        <p>Select the stage you are interested in</p>
-                    </div>}</>
-            }
         </div>
     )
 }

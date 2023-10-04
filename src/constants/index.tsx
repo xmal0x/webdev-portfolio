@@ -19,14 +19,17 @@ export const infoSections = [
     {
         id: 1,
         title: 'about_me',
+        to: 'bio'
     },
     {
         id: 2,
         title: 'education',
+        to: 'education'
     },
     {
         id: 3,
         title: 'experience',
+        to: 'experience'
     },
 ]
 
@@ -188,7 +191,7 @@ export const menuLinks = [
     {
         id: 2,
         title: 'about_me',
-        link: '/about',
+        link: '/bio',
     },
     {
         id: 3,

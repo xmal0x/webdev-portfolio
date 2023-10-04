@@ -29,7 +29,7 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
             className="flex-1 lg:relative absolute inset-0 md:h-fit h-full
             lg:bg-inherit bg-second-dark-bg overflow-auto text-gray-text
             lg:border-none border border-secondary-gray rounded-sm">
-            <div className="flex-col md:p-8 p-4 flex overflow-auto">
+            <div className="flex-col md:p-0 p-4 flex overflow-auto">
                 <div className="flex flex-row">
                     <div>
                         <h4 className="sm:text-2xl text-xl text-white mb-2">{companyName}</h4>

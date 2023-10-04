@@ -2,6 +2,9 @@ import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom"
 
 import {About, Contacts, Home, Projects} from "./pages"
 import {Footer, Header} from "./components"
+import Bio from "./pages/About/BIo/Bio";
+import Education from "./pages/About/Education/Education";
+import Experience from "./pages/About/Experience/Experience";
 
 const App = () => {
     const Layout = () => (
@@ -21,9 +24,26 @@ const App = () => {
                     path: '/',
                     element: <Home/>
                 },
+                // {
+                //     path: '/about',
+                //     element: <About/>
+                // },
                 {
-                    path: '/about',
-                    element: <About/>
+                    element: <About/>,
+                    children: [
+                        {
+                            path: "/bio",
+                            element: <Bio/>
+                        },
+                        {
+                            path: "/education",
+                            element: <Education/>
+                        },
+                        {
+                            path: "/experience",
+                            element: <Experience/>
+                        },
+                    ]
                 },
                 {
                     path: '/projects',
