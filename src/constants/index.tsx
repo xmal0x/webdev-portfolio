@@ -14,6 +14,9 @@ import {
 } from "react-icons/si"
 
 import {Link} from "@types"
+import React from "react";
+import {RiArticleFill} from 'react-icons/ri'
+import {HiDocumentDownload} from "react-icons/hi";
 
 export const infoSections = [
     {
@@ -58,6 +61,30 @@ export const contacts: Link[] = [
         icon: <FaLinkedin className="contacts-icon"/>,
         link: 'https://www.linkedin.com/in/kgalkin/'
     },
+]
+
+export const otherLinks: Link[] = [
+    {
+        id: 1,
+        text: 'How we make a game',
+        link: 'https://habr.com/p/756264/',
+        icon: <RiArticleFill className="contacts-icon"/>
+    }
+]
+
+export const cvLinks: Link[] = [
+    {
+        id: 1,
+        link: '/kgalkin_en_cv.pdf',
+        text: 'English',
+        icon: <HiDocumentDownload className="contacts-icon"/>
+    },
+    {
+        id: 2,
+        link: '/kgalkin_ru_cv.pdf',
+        text: 'Russian',
+        icon: <HiDocumentDownload className="contacts-icon"/>
+    }
 ]
 
 export const filters = [
@@ -199,3 +226,10 @@ export const menuLinks = [
         link: '/projects',
     },
 ]
+
+export interface LinksSectionProps {
+    title: string,
+    icon: React.ReactNode,
+    links: Link[],
+    containerClasses?: string
+}

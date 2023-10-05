@@ -14,6 +14,7 @@ import BioSection from "./About/Bio/BioSection"
 import EducationSection from "./About/Education/EducationSection"
 import Stage from "./About/Stage/Stage"
 import DropdownMenu from "./UI/DropdownMenu/DropdownMenu"
+import LinksSection from "./Contacts/LinksSection/LinksSection"
 
 export {
     Footer,
@@ -31,5 +32,6 @@ export {
     EducationSection,
     Stage,
     Button,
-    DropdownMenu
+    DropdownMenu,
+    LinksSection
 }
