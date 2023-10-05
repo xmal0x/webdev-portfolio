@@ -11,7 +11,11 @@ import {menuLinks} from "@constants"
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false)
 
-    const toggleMenu = () => setMenuVisible(!menuVisible)
+    const toggleMenu = () => {
+        setMenuVisible(!menuVisible)
+    }
+
+    const handleClose = () => setMenuVisible(false)
 
     return (
         <>
@@ -35,7 +39,7 @@ const Header = () => {
 
                 {/*Mobile/Tablet*/}
                 <nav className="md:hidden flex justify-between items-center h-full px-4">
-                    <Link to={'/'} className="md:w-48 w-32 md:mr-0 mr-4">
+                    <Link to={'/'} className="md:w-48 w-32 md:mr-0 mr-4" onClick={handleClose}>
                         <span>kirill_galkin</span>
                     </Link>
 
@@ -52,7 +56,7 @@ const Header = () => {
             </header>
 
             {/*Dropdown Menu*/}
-            <DropdownMenu isVisible={menuVisible} onClose={() => setMenuVisible(false)}/>
+            <DropdownMenu isVisible={menuVisible} onClose={handleClose}/>
         </>
     )
 }

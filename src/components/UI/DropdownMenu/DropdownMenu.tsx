@@ -24,10 +24,10 @@ const DropdownMenu = ({isVisible, onClose}: DropdownMenuProps) => {
         <Transition
             show={isVisible}
             as={Fragment}
-            enter="transition-opacity duration-100"
+            enter="transition-opacity duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
-            leave="transition-opacity duration-100"
+            leave="transition-opacity duration-200"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
         >
