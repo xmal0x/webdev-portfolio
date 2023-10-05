@@ -1,4 +1,5 @@
 import {EducationSection} from "../../../components";
+import {withOpacityTransition} from "../../../hoc";
 
 const Education = () => {
     return (
@@ -6,4 +7,4 @@ const Education = () => {
     )
 }
 
-export default Education
+export default withOpacityTransition(Education)

@@ -2,7 +2,7 @@ import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom"
 
 import {About, Contacts, Home, Projects} from "./pages"
 import {Footer, Header} from "./components"
-import Bio from "./pages/About/BIo/Bio";
+import Bio from "./pages/About/Bio/Bio";
 import Education from "./pages/About/Education/Education";
 import Experience from "./pages/About/Experience/Experience";
 
@@ -24,10 +24,6 @@ const App = () => {
                     path: '/',
                     element: <Home/>
                 },
-                // {
-                //     path: '/about',
-                //     element: <About/>
-                // },
                 {
                     element: <About/>,
                     children: [

@@ -2,12 +2,13 @@ import {Stage, Timeline} from "../../../components";
 import React, {useState} from "react";
 import {CareerStage} from "../../../types";
 import {career} from "../../../data";
+import {withOpacityTransition} from "../../../hoc";
 
 const Experience = () => {
     const [careerStage, setCareerStage] = useState<CareerStage | undefined>(undefined)
 
     return (
-        <div className="flex">
+        <div className="flex w-full">
             <div>
                 <Timeline career={career} onSelect={setCareerStage}/>
             </div>
@@ -28,4 +29,4 @@ const Experience = () => {
     )
 }
 
-export default Experience
+export default withOpacityTransition(Experience)
