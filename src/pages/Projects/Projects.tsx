@@ -1,10 +1,10 @@
 import React, {ChangeEvent, useState} from "react"
 import {HiOutlineAdjustmentsVertical, HiOutlineCheck} from 'react-icons/hi2'
-import {ProjectCard, Sidebar} from "../../components"
-import {withOpacityTransition, withPageStyles} from "../../hoc"
+import {ProjectCard, Sidebar} from "@components"
+import {withOpacityTransition, withPageStyles} from "@hoc"
 
-import {filters} from "../../constants"
-import {projects} from "../../data"
+import {filters} from "@constants"
+import {projects} from "@data"
 
 const Projects = () => {
     const [selectedFilters, setSelectedFilters] = useState(new Set<string>())

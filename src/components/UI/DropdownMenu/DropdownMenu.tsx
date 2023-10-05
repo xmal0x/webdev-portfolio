@@ -2,9 +2,9 @@ import {Transition} from "@headlessui/react"
 import {Fragment} from "react"
 import {NavLink} from "react-router-dom"
 
-import {DropdownLinkProps, DropdownMenuProps} from "../../../types"
+import {DropdownLinkProps, DropdownMenuProps} from "@types"
 
-import {menuLinks} from "../../../constants"
+import {menuLinks} from "@constants"
 
 const DropdownLink = ({link, title, onClose}: DropdownLinkProps) => {
     return (

@@ -2,9 +2,9 @@ import React, {useState} from "react"
 import {Gallery} from "react-grid-gallery"
 import Lightbox from "yet-another-react-lightbox"
 
-import {Textarea} from "../../index"
+import {Textarea} from "@components"
 
-import {aboutBio, images} from "../../../data"
+import {aboutBio, images} from "@data"
 
 const slides = images.map(({original}) => ({
     src: original

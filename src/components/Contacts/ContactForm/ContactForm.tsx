@@ -1,9 +1,9 @@
 import React, {ChangeEvent, FormEvent, useEffect, useState} from "react"
-import {Button} from "../../index"
+import {Button} from "@components"
 
 import './styles.css'
 
-import {ContactFormProps, FormData, FormProps, SuccessMessageProps} from "../../../types"
+import {ContactFormProps, FormData, FormProps, SuccessMessageProps} from "@types"
 
 const validateEmail = (email: string) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,6}$/

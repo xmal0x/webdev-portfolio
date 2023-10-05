@@ -1,4 +1,3 @@
-import React from "react"
 import {Transition} from "@headlessui/react"
 
 const withOpacityTransition = (Wrapped: React.FunctionComponent) => {

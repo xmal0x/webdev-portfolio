@@ -13,7 +13,7 @@ import {
     SiTypescript
 } from "react-icons/si"
 
-import {Link} from "../types"
+import {Link} from "@types"
 
 export const infoSections = [
     {

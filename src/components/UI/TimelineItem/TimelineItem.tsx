@@ -1,4 +1,4 @@
-import {TimeLineItemProps} from "../../../types"
+import {TimeLineItemProps} from "@types"
 
 const TimelineItem = ({careerStage, onSelect}: TimeLineItemProps) => {
     const {companyName, start, end, position, technology} = careerStage

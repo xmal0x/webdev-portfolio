@@ -1,6 +1,6 @@
 import {NavLink} from "react-router-dom"
 
-import {NavButtonProps} from "../../../types"
+import {NavButtonProps} from "@types"
 
 const NavButton = ({link, title, showRightBorder = false}: NavButtonProps) => {
     return (

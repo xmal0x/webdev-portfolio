@@ -1,8 +1,9 @@
-import {Stage, Timeline} from "../../../components";
 import React, {useState} from "react";
-import {CareerStage} from "../../../types";
-import {career} from "../../../data";
-import {withOpacityTransition} from "../../../hoc";
+
+import {Stage, Timeline} from "@components";
+import {CareerStage} from "@types";
+import {career} from "@data";
+import {withOpacityTransition} from "@hoc";
 
 const Experience = () => {
     const [careerStage, setCareerStage] = useState<CareerStage | undefined>(undefined)

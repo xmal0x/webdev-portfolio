@@ -1,7 +1,5 @@
-import React from "react";
-
-import {footerLinks} from "../../../constants"
-import {FooterLinkProps} from "../../../types";
+import {footerLinks} from "@constants"
+import {FooterLinkProps} from "@types";
 
 const FooterLink = ({link, isLast, icon}: FooterLinkProps) => {
     return (

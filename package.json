@@ -24,10 +24,10 @@
     "yet-another-react-lightbox": "^3.12.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/react-syntax-highlighter": "^15.5.7",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.30",

@@ -1,7 +1,7 @@
-import {Textarea} from "../../index"
+import {Textarea} from "@components"
 
-import {skills} from "../../../constants"
-import {aboutEducation} from "../../../data"
+import {skills} from "@constants"
+import {aboutEducation} from "@data"
 
 const EducationSection = () => {
     return (

@@ -1,4 +1,4 @@
-import {ProjectCardProps} from "../../../types"
+import {ProjectCardProps} from "@types"
 
 const ProjectCard = ({title, tags, image, description, links}: ProjectCardProps) => {
 

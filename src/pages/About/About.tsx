@@ -3,12 +3,12 @@ import {HiChevronDown, HiChevronRight, HiFolderOpen, HiUserCircle} from "react-i
 import "yet-another-react-lightbox/styles.css"
 import {NavLink, Outlet} from "react-router-dom";
 
-import {Sidebar} from "../../components"
-import {withOpacityTransition, withPageStyles} from "../../hoc"
+import {Sidebar} from "@components"
+import {withOpacityTransition, withPageStyles} from "@hoc"
 
 import './styles.css'
 
-import {infoSections} from "../../constants"
+import {infoSections} from "@constants"
 
 
 const About = () => {

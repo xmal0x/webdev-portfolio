@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-import {withOpacityTransition} from "../../hoc"
+import {withOpacityTransition} from "@hoc"
 
 import './styles.css'
 

@@ -1,4 +1,4 @@
-import {TextareaProps} from "../../../types"
+import {TextareaProps} from "@types"
 
 const Textarea = ({content}: TextareaProps) => {
     const {title, paragraphs} = content

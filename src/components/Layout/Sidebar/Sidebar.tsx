@@ -1,6 +1,6 @@
 import {Transition} from "@headlessui/react"
 
-import {SideBarProps} from "../../../types"
+import {SideBarProps} from "@types"
 
 const Sidebar = ({children}: SideBarProps) => {
     return (

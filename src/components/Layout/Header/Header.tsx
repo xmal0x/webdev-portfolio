@@ -2,11 +2,11 @@ import {Link} from "react-router-dom"
 import {CgClose, CgMenuGridO} from "react-icons/cg"
 import {useState} from "react"
 
-import {DropdownMenu, NavButton} from "../../index"
+import {DropdownMenu, NavButton} from "@components"
 
 import './styles.css'
 
-import {menuLinks} from "../../../constants"
+import {menuLinks} from "@constants"
 
 const Header = () => {
     const [menuVisible, setMenuVisible] = useState(false)

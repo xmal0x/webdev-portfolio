@@ -3,7 +3,7 @@ import {nightOwl} from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import './styles.css'
 
-import {CodeFormProps} from "../../../types"
+import {CodeFormProps} from "@types"
 
 //TODO make more easy
 const CodeForm = ({data}: CodeFormProps) => {

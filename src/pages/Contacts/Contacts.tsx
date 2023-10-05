@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from "react"
 import emailjs from 'emailjs-com'
 import {HiDocumentText, HiGlobeAlt} from "react-icons/hi2"
-
-import {CodeForm, ContactForm, Sidebar} from "../../components"
-import {withOpacityTransition, withPageStyles} from "../../hoc"
-
-import {FormData} from '../../types'
-import {contacts} from "../../constants"
-import {Link} from "react-router-dom";
 import {HiDocumentDownload} from "react-icons/hi";
 import {RiDownloadCloudFill} from "react-icons/ri";
+
+import {CodeForm, ContactForm, Sidebar} from "@components"
+import {withOpacityTransition, withPageStyles} from "@hoc"
+
+import {FormData} from '@types'
+import {contacts} from "@constants"
+import {Link} from "react-router-dom";
+
 
 const Contacts = () => {
     const [formData, setFormData] = useState({

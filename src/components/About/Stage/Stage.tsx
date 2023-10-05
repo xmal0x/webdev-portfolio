@@ -1,7 +1,8 @@
-import {CareerStageProps} from "../../../types"
+import {CgClose} from "react-icons/cg"
 
-import {months} from "../../../constants"
-import {CgClose} from "react-icons/cg";
+import {CareerStageProps} from "@types"
+
+import {months} from "@constants"
 
 const geFormattedDatesWithDiff = (start: Date, end: Date) => {
     const startYear = start.getFullYear()
