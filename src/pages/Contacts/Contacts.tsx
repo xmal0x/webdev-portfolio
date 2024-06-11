@@ -72,8 +72,8 @@ const Contacts = () => {
                 <div className="md:hidden flex mt-2 border-t border-secondary-gray">
                     <p className="flex items-center gap-2 mt-2"><RiDownloadCloudFill
                         className="w-4 h-4 object-contain"/>Download my CV
-                        <Link to="/kgalkin_en_cv.pdf" target="_blank" className="home-link mx-2">en</Link>or
-                        <Link to="/kgalkin_ru_cv.pdf" target="_blank" className="home-link mx-2">ru</Link>
+                        <Link to="/kgalkin_frontend_en.pdf" target="_blank" className="home-link mx-2">en</Link>or
+                        <Link to="/kgalkin_frontend_ru.pdf" target="_blank" className="home-link mx-2">ru</Link>
                     </p>
                 </div>
             </Sidebar>
