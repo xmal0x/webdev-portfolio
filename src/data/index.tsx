@@ -18,7 +18,7 @@ import {
     photo6,
     photo6_t
 } from "../assets"
-import {CareerStage, TextContent} from "../types"
+import {CareerStage, TextContent} from "@types"
 
 export const aboutBio: TextContent = {
     title: 'Hello everyone!',
@@ -26,7 +26,7 @@ export const aboutBio: TextContent = {
         `My name is Kirill`,
 
         `I began my professional journey in 2014, starting with backend development and later transitioning to frontend. 
-        I worked with Angular for an extended period, but currently, my preference is React, and I'm thrilled about it`,
+        I have experience working with Angular, React, and I enjoy working with these technologies.`,
 
         `I'm not a fan of overengineering, as I believe that beauty lies in simplicity (like Nirvana's songs;)). 
         My primary skill is the ability to solve tasks within tight deadlines. 
@@ -126,11 +126,27 @@ export const projects = [
 
 export const career: CareerStage[] = [
     {
+        id: 5,
+        companyName: 'Ufarm.Digital',
+        start: new Date('2024-02-01'),
+        position: 'Lead Frontend Engineer',
+        technology: ['react', 'web3', 'typescript'],
+        tasks: [
+            'Developing intuitive, user-friendly interfaces for interacting with decentralized applications (dApps)',
+            'Implementing connections to blockchain networks using Web3 libraries such as wagmi or ethers.js',
+            'Interacting with smart contracts deployed on the blockchain to read data and trigger transactions',
+            'Refactoring',
+            'Code review process, discuss best practices',
+            'Conduct thorough assessments of tasks',
+            'Engage in discussions to streamline operations, optimize efficiency, and resolve conflicts, cultivating a culture of transparency and collaboration',
+        ]
+    },
+    {
         id: 4,
         companyName: 'Zyfra',
         start: new Date('2022-02-01'),
         end: new Date('2023-07-01'),
-        position: 'Frontend Developer',
+        position: 'Frontend Engineer',
         technology: ['node.js', 'angular', 'typescript'],
         tasks: [
             'Creating user interfaces and client-side components using the Angular framework to build interactive and responsive web applications',
@@ -148,10 +164,10 @@ export const career: CareerStage[] = [
         companyName: 'Murano Software',
         start: new Date('2020-09-01'),
         end: new Date('2022-02-01'),
-        position: 'Fullstack Developer',
-        technology: ['.net', 'postgresql', 'typescript', 'angular'],
+        position: 'Fullstack Engineer',
+        technology: ['.net', 'postgresql', 'typescript', 'angular', 'react'],
         tasks: [
-            'Frontend development using Angular, creating user interfaces and client-side components for applications',
+            'Frontend development using Angular and React, creating user interfaces and client-side components for applications',
             'Backend development using the .NET platform, including the creation of reliable and scalable server-side components and applications',
             'Working with existing code, which involves analyzing, adapting, and making modifications to someone else\'s code to improve its readability and maintainability',
             'Conducting code refactoring to enhance its structure, cleanliness, and efficiency',
@@ -166,14 +182,14 @@ export const career: CareerStage[] = [
         companyName: 'Elva',
         start: new Date('2017-11-01'),
         end: new Date('2020-09-01'),
-        position: 'Senior Developer',
+        position: 'Lead Fullstack Engineer',
         technology: ['.net', 'javascript', 'mssql', 'postgresql', 'typescript', 'angular', 'react'],
         tasks: [
+            'Frontend development using Angular and React, to create engaging and user-friendly interfaces',
             'Software development on the .NET platform, creating robust and scalable applications',
             'Collaborating with existing codebases, conducting code refactoring, and optimizing performance for enhanced efficiency',
             'SWR-PDM platform development, including the creation of modules that seamlessly link product structures with documentation',
             'Designing and implementing web services to facilitate data exchange and communication',
-            'Front-end development expertise, encompassing JavaScript, TypeScript, and proficiency in frameworks like Angular and React, to create engaging and user-friendly interfaces',
             'Developing plugins and business processes within the Microsoft Dynamics CRM environment to enhance its capabilities',
             'Playing a crucial role in project planning, including project design and assessment, ensuring the successful execution of software development projects',
             'Authoring informative articles about products and solutions for the company\'s website to enhance product awareness and knowledge sharing',

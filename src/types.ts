@@ -19,7 +19,7 @@ export interface CareerStage {
     id: number
     companyName: string
     start: Date
-    end: Date
+    end?: Date
     position: string
     technology: string[]
     tasks: string[]

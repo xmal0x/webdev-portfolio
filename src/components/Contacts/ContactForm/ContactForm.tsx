@@ -20,6 +20,7 @@ const SuccessMessage = ({text, onSendNewMessage}: SuccessMessageProps) => {
     )
 }
 
+//TODO exclude
 const Form = ({onSubmit, onChange, message, email, loading, name, error}: FormProps) => {
 
     const [errorMessage, setErrorMessage] = useState<string>('')
@@ -70,6 +71,7 @@ const Form = ({onSubmit, onChange, message, email, loading, name, error}: FormPr
                 </label>
                 <label className="label">
                     message:
+                    {/*TODO isMobile less rows*/}
                     <textarea
                         name="message"
                         className="input resize-none"

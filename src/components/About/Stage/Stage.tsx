@@ -4,11 +4,11 @@ import {CareerStageProps} from "@types"
 
 import {months} from "@constants"
 
-const geFormattedDatesWithDiff = (start: Date, end: Date) => {
+const getFormattedDatesWithDiff = (start: Date, end?: Date) => {
     const startYear = start.getFullYear()
     const startMonth = start.getMonth()
-    const endYear = end.getFullYear()
-    const endMonth = end.getMonth()
+    const endYear = end ? end.getFullYear() : new Date().getFullYear()
+    const endMonth = end ? end.getMonth() : new Date().getMonth()
 
     let yearDiff = endYear - startYear
     let monthDiff = endMonth - startMonth
@@ -17,13 +17,17 @@ const geFormattedDatesWithDiff = (start: Date, end: Date) => {
         monthDiff += 12
         yearDiff--
     }
-    return [`${months[startMonth]} ${startYear} - ${months[endMonth]} ${endYear}`, `${yearDiff} yr ${monthDiff + 1} mos`]
+    const formatedEnd = end ? `${months[endMonth]} ${endYear}` : 'Present'
+
+    const dateRange = `${months[startMonth]} ${startYear} - ${formatedEnd}`
+    const duration = yearDiff > 0 ? `${yearDiff} yr ${monthDiff + 1} mos` : `${monthDiff + 1} mos`
+    return [dateRange, duration]
 }
 
 const Stage = ({stage, onClose}: CareerStageProps) => {
     const {companyName, end, position, technology, tasks, start} = stage
 
-    const datesData = geFormattedDatesWithDiff(start, end)
+    const [dateRange, duration] = getFormattedDatesWithDiff(start, end)
 
     return (
         <section
@@ -34,8 +38,8 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
                 <div className="flex flex-row">
                     <div>
                         <h4 className="sm:text-2xl text-xl text-white mb-2">{companyName}</h4>
-                        <p className="sm:text-base text-sm">{datesData[0]}</p>
-                        <p className="sm:text-sm text-xs mb-4">{datesData[1]}</p>
+                        <p className="sm:text-base text-sm">{dateRange}</p>
+                        <p className="sm:text-sm text-xs mb-4">{duration}</p>
                     </div>
                 </div>
                 <p className="sm:text-xl text-base text-white mb-4">{position}</p>
@@ -51,7 +55,6 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
                     ))}
                 </div>
             </div>
-            {/*{showCloseBtn &&*/}
             <button
                 className="md:hidden text-second-dark-bg block p-2 opacity-70 rounded-full bg-white border-2 border-white fixed bottom-20 right-6 z-50"
                 type="button"
@@ -59,7 +62,6 @@ const Stage = ({stage, onClose}: CareerStageProps) => {
             >
                 <CgClose className=" w-8 h-8 object-contain "/>
             </button>
-            {/*}*/}
         </section>
     )
 }
