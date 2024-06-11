@@ -1,5 +1,5 @@
 .home-link {
-    @apply text-blue-text hover:underline
+    @apply text-blue-text underline underline-offset-4
 }
 
 .home-container {

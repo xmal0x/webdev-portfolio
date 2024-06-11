@@ -10,7 +10,7 @@ const Experience = () => {
 
     return (
         <div className="flex w-full">
-            <div>
+            <div className="pr-4">
                 <Timeline career={career} onSelect={setCareerStage}/>
             </div>
 

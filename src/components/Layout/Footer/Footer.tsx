@@ -26,7 +26,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="md:flex hidden w-fit pr-4">
-                    <span className="whitespace-nowrap">HoneySoft 2023</span>
+                    <span className="whitespace-nowrap">HoneySoft 2024</span>
                 </div>
             </div>
         </footer>

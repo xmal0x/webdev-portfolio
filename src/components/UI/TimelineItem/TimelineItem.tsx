@@ -9,7 +9,7 @@ const TimelineItem = ({careerStage, onSelect}: TimeLineItemProps) => {
             <div
                 className="p-8 pt-2 duration-200 transition group-hover:bg-white-text group-hover:bg-opacity-5 cursor-pointer">
                 <h5 className="text-xl text-white-text">{companyName}</h5>
-                <p className="text-sm">{`${start.getFullYear()} - ${end.getFullYear()}`} </p>
+                <p className="text-sm">{`${start.getFullYear()} - ${end?.getFullYear() || 'Present'}`} </p>
                 <p className="">{position}</p>
                 <div className="flex flex-wrap">
                     {technology.map(tech => (

@@ -14,7 +14,7 @@ const data = {
     message: '${data.message}',
 }
 
-button.addEventListener('click', () => {form.send(message))}`
+button.addEventListener('click', () => {form.send(data))}`
 
     return (
 
