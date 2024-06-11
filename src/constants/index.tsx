@@ -75,13 +75,13 @@ export const otherLinks: Link[] = [
 export const cvLinks: Link[] = [
     {
         id: 1,
-        link: '/kgalkin_en_cv.pdf',
+        link: '/kgalkin_frontend_en.pdf',
         text: 'English',
         icon: <HiDocumentDownload className="contacts-icon"/>
     },
     {
         id: 2,
-        link: '/kgalkin_ru_cv.pdf',
+        link: '/kgalkin_frontend_ru.pdf',
         text: 'Russian',
         icon: <HiDocumentDownload className="contacts-icon"/>
     }
